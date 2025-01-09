@@ -1,0 +1,3 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+bcn_fud_co_access,Bcn Fud co,model_bcn_fud_co,group_bcn_fel_co,1,1,1,1
+

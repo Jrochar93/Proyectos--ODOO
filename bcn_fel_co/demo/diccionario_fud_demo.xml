@@ -1,0 +1,2761 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="0"> 
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_1">
+            <field name="name">Folio</field>
+            <field name="description">Folio</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">30</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">integer</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_2">
+            <field name="name">Fecha de Emision</field>
+            <field name="description">Fecha de Emision</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">40</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">date</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_3">
+            <field name="name">Tipo de Despacho</field>
+            <field name="description">Tipo de Despacho</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">60</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">integer</field>
+            <field name="largo">1</field>
+
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_4">
+            <field name="name">Ind. traslado de bienes</field>
+            <field name="description">Ind. traslado de bienes</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">70</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">integer</field>
+            <field name="largo">1</field>
+
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_5">
+            <field name="name">Indicador Servicio</field>
+            <field name="description">Indicador Servicio</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">90</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">integer</field>
+            <field name="largo">1</field>
+
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_6">
+            <field name="name">Fecha Cancelacion</field>
+            <field name="description">Fecha Cancelacion</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">140</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">date</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_7">
+            <field name="name">Fecha de Pago</field>
+            <field name="description">Fecha de Pago</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">170</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">date</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_8">
+            <field name="name">Fecha Vencimiento</field>
+            <field name="description">Fecha Vencimiento</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">290</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">date</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_9">
+            <field name="name">Fecha Autorizacion</field>
+            <field name="description">Fecha Autorizacion</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">380</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">date</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_10">
+            <field name="name">Glosa Pago</field>
+            <field name="description">Glosa Pago</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">190</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">40</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_11">
+            <field name="name">Fecha Despacho</field>
+            <field name="description">Fecha Despacho</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">60</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">date</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_12">
+            <field name="name">Fecha Expiracion</field>
+            <field name="description">Fecha Expiracion</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">170</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">date</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_13">
+            <field name="name">Fecha Elaboracion</field>
+            <field name="description">Fecha Elaboracion</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">230</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">date</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_14">
+            <field name="name">Fecha Vencimiento</field>
+            <field name="description">Fecha Vencimiento</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">240</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">date</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_15">
+            <field name="name">Fecha Referencia</field>
+            <field name="description">Fecha Referencia</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">70</field>
+            <field name="seccion">3</field>
+            <field name="tipo_dato">date</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_16">
+            <field name="name">Impresora</field>
+            <field name="description">Impresora</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">10</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_17">
+            <field name="name">Tipo Impresion</field>
+            <field name="description">Tipo Impresion</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">80</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">1</field>
+
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_18">
+            <field name="name">Condicion de Venta</field>
+            <field name="description">Condicion de Venta</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">120</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">30</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_19">
+            <field name="name">Per. Desde</field>
+            <field name="description">Per. Desde</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">200</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_20">
+            <field name="name">Per. Hasta</field>
+            <field name="description">Per. Hasta</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">210</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_21">
+            <field name="name">Medio de Pago</field>
+            <field name="description">Medio de Pago</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">220</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">2</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_22">
+            <field name="name">Tipo Cuenta Pago</field>
+            <field name="description">Tipo Cuenta Pago</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">230</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">2</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_23">
+            <field name="name">Numero Cuenta Pago</field>
+            <field name="description">Numero Cuenta Pago</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">240</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_24">
+            <field name="name">Banco Pago</field>
+            <field name="description">Banco Pago</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">250</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">40</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_25">
+            <field name="name">Codigo Term. Pago</field>
+            <field name="description">Codigo Term. Pago</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">260</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">4</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_26">
+            <field name="name">Glosa Term. Pago</field>
+            <field name="description">Glosa Term. Pago</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">270</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">100</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_27">
+            <field name="name">Rut Emisor</field>
+            <field name="description">Rut Emisor</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">300</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_28">
+            <field name="name">Razon Social Emisor</field>
+            <field name="description">Razon Social Emisor</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">310</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">100</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_29">
+            <field name="name">Giro Emisor</field>
+            <field name="description">Giro Emisor</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">320</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">80</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_30">
+            <field name="name">Telefono Emisor</field>
+            <field name="description">Telefono Emisor</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">330</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_31">
+            <field name="name">Correo Emisor</field>
+            <field name="description">Correo Emisor</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">340</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">80</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_32">
+            <field name="name">Sucursal</field>
+            <field name="description">Sucursal</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">390</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_33">
+            <field name="name">Codigo Adicional Sucursal</field>
+            <field name="description">Codigo Adicional Sucursal</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">410</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_34">
+            <field name="name">Direccion Origen</field>
+            <field name="description">Direccion Origen</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">420</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">60</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_35">
+            <field name="name">Comuna Origen</field>
+            <field name="description">Comuna Origen</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">430</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_36">
+            <field name="name">Ciudad Origen</field>
+            <field name="description">Ciudad Origen</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">440</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_37">
+            <field name="name">Codigo Vendedor</field>
+            <field name="description">Codigo Vendedor</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">450</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">60</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_38">
+            <field name="name">Id. Adicional Emisor</field>
+            <field name="description">Id. Adicional Emisor</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">460</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_39">
+            <field name="name">RUT Mandante</field>
+            <field name="description">RUT Mandante</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">470</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_40">
+            <field name="name">Rut Receptor</field>
+            <field name="description">Rut Receptor</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">480</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_41">
+            <field name="name">Codigo Interno Receptor</field>
+            <field name="description">Codigo Interno Receptor</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">490</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_42">
+            <field name="name">Razon Social Receptor</field>
+            <field name="description">Razon Social Receptor</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">500</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">100</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_43">
+            <field name="name">Id. Receptor Extranjero</field>
+            <field name="description">Id. Receptor Extranjero</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">510</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_44">
+            <field name="name">Nacionalidad Receptor Extranjero</field>
+            <field name="description">Nacionalidad Receptor Extranjero</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">520</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">3</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_45">
+            <field name="name">Id. Adicional Receptor Extranjero</field>
+            <field name="description">Id. Adicional Receptor Extranjero</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">530</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_46">
+            <field name="name">Giro Receptor</field>
+            <field name="description">Giro Receptor</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">540</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">40</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_47">
+            <field name="name">Contacto Receptor</field>
+            <field name="description">Contacto Receptor</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">550</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">80</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_48">
+            <field name="name">Correo Receptor</field>
+            <field name="description">Correo Receptor</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">560</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">80</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_49">
+            <field name="name">Direccion Receptor</field>
+            <field name="description">Direccion Receptor</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">570</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">70</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_50">
+            <field name="name">Comuna Receptor</field>
+            <field name="description">Comuna Receptor</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">580</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_51">
+            <field name="name">Ciudad Receptor</field>
+            <field name="description">Ciudad Receptor</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">590</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_52">
+            <field name="name">Direccion Postal</field>
+            <field name="description">Direccion Postal</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">600</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">70</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_53">
+            <field name="name">Comuna Postal</field>
+            <field name="description">Comuna Postal</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">610</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_54">
+            <field name="name">Ciudad Postal</field>
+            <field name="description">Ciudad Postal</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">620</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_55">
+            <field name="name">RUT Solicita</field>
+            <field name="description">RUT Solicita</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">630</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">0</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_56">
+            <field name="name">Patente Transporte</field>
+            <field name="description">Patente Transporte</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">10</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">8</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_57">
+            <field name="name">Rut Transporte</field>
+            <field name="description">Rut Transporte</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">20</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_58">
+            <field name="name">RUT Chofer</field>
+            <field name="description">RUT Chofer</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">30</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_59">
+            <field name="name">Nombre Chofer</field>
+            <field name="description">Nombre Chofer</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">40</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">30</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_60">
+            <field name="name">Direccion Destino</field>
+            <field name="description">Direccion Destino</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">50</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">70</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_61">
+            <field name="name">Comuna Destino</field>
+            <field name="description">Comuna Destino</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">60</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_62">
+            <field name="name">Ciudad Destino</field>
+            <field name="description">Ciudad Destino</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">70</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_63">
+            <field name="name">Nombre Transporte</field>
+            <field name="description">Nombre Transporte</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">120</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">40</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_64">
+            <field name="name">RUT CIA Transporte</field>
+            <field name="description">RUT CIA Transporte</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">130</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_65">
+            <field name="name">Nombre CIA Transporte</field>
+            <field name="description">Nombre CIA Transporte</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">140</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">40</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_66">
+            <field name="name">Id Adicional CIA Transporte</field>
+            <field name="description">Id Adicional CIA Transporte</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">150</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_67">
+            <field name="name">Booking</field>
+            <field name="description">Booking</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">160</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_68">
+            <field name="name">Operador</field>
+            <field name="description">Operador</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">170</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_69">
+            <field name="name">Id. Adicional Puerto Embarque</field>
+            <field name="description">Id. Adicional Puerto Embarque</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">190</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_70">
+            <field name="name">Id Adicional Puerto Desembarque</field>
+            <field name="description">Id Adicional Puerto Desembarque</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">210</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_71">
+            <field name="name">Marcas</field>
+            <field name="description">Marcas</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">320</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">255</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_72">
+            <field name="name">Id Container</field>
+            <field name="description">Id Container</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">330</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">25</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_73">
+            <field name="name">Sello</field>
+            <field name="description">Sello</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">340</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_74">
+            <field name="name">Emisor Sello</field>
+            <field name="description">Emisor Sello</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">350</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">70</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_75">
+            <field name="name">Cod. Pais Receptor</field>
+            <field name="description">Cod. Pais Receptor</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">380</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">3</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_76">
+            <field name="name">Cod. Pais Destino</field>
+            <field name="description">Cod. Pais Destino</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">390</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">3</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_77">
+            <field name="name">Tipo Moneda</field>
+            <field name="description">Tipo Moneda</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">10</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">15</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_78">
+            <field name="name">Tipo Impuesto</field>
+            <field name="description">Tipo Impuesto</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">100</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">3</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_79">
+            <field name="name">xMontoEscrito</field>
+            <field name="description">xMontoEscrito</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">20</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">120</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_80">
+            <field name="name">Nota Venta</field>
+            <field name="description">Nota Venta</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">30</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_81">
+            <field name="name">Orden Compra</field>
+            <field name="description">Orden Compra</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">40</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_82">
+            <field name="name">Usuario</field>
+            <field name="description">Usuario</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">50</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_83">
+            <field name="name">Observaciones 1</field>
+            <field name="description">Observaciones 1</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">90</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">120</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_84">
+            <field name="name">Observaciones 2</field>
+            <field name="description">Observaciones 2</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">100</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">120</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_85">
+            <field name="name">xTipoCambio</field>
+            <field name="description">xTipoCambio</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">110</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">50</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_86">
+            <field name="name">xMoneda</field>
+            <field name="description">xMoneda</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">120</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">50</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_87">
+            <field name="name">Tipo Impuesto OM</field>
+            <field name="description">Tipo Impuesto OM</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">100</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">3</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_88">
+            <field name="name">Tipo codigo</field>
+            <field name="description">Tipo codigo</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">30</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_89">
+            <field name="name">Codigo del Item</field>
+            <field name="description">Codigo del Item</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">40</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">35</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_90">
+            <field name="name">Indicador Agente</field>
+            <field name="description">Indicador Agente</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">70</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">1</field>
+
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_91">
+            <field name="name">Nombre del Item</field>
+            <field name="description">Nombre del Item</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">110</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">80</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_92">
+            <field name="name">Descripcion Adicion al Item</field>
+            <field name="description">Descripcion Adicion al Item</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">120</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">1000</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_93">
+            <field name="name">UM Referencia</field>
+            <field name="description">UM Referencia</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">140</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">4</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_94">
+            <field name="name">Lote Serie</field>
+            <field name="description">Lote Serie</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">160</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">30</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_95">
+            <field name="name">Tipo Codigo Subcantidad</field>
+            <field name="description">Tipo Codigo Subcantidad</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">220</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_96">
+            <field name="name">Unidad de Medida</field>
+            <field name="description">Unidad de Medida</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">250</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">4</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_97">
+            <field name="name">Moneda</field>
+            <field name="description">Moneda</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">290</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">3</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_98">
+            <field name="name">Tipo Descuento</field>
+            <field name="description">Tipo Descuento</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">370</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">1</field>
+
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_99">
+            <field name="name">Tipo Recargo</field>
+            <field name="description">Tipo Recargo</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">420</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">1</field>
+
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_100">
+            <field name="name">Codigo Impuesto Adic.</field>
+            <field name="description">Codigo Impuesto Adic.</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">440</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">6</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_101">
+            <field name="name">Glosa Sub Total</field>
+            <field name="description">Glosa Sub Total</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">20</field>
+            <field name="seccion">6</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">40</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_102">
+            <field name="name">Tipo Movimiento</field>
+            <field name="description">Tipo Movimiento</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">20</field>
+            <field name="seccion">4</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">1</field>
+
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_103">
+            <field name="name">Glosa Desc. Recargo</field>
+            <field name="description">Glosa Desc. Recargo</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">30</field>
+            <field name="seccion">4</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">45</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_104">
+            <field name="name">Tipo Valor</field>
+            <field name="description">Tipo Valor</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">40</field>
+            <field name="seccion">4</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">1</field>
+
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_105">
+            <field name="name">Tipo Documento Referencia</field>
+            <field name="description">Tipo Documento Referencia</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">20</field>
+            <field name="seccion">3</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">3</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_106">
+            <field name="name">Folio Referencia</field>
+            <field name="description">Folio Referencia</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">40</field>
+            <field name="seccion">3</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_107">
+            <field name="name">RUT Otro Contribuyente</field>
+            <field name="description">RUT Otro Contribuyente</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">50</field>
+            <field name="seccion">3</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_108">
+            <field name="name">Id Adic. Otro Contribuyente</field>
+            <field name="description">Id Adic. Otro Contribuyente</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">60</field>
+            <field name="seccion">3</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">20</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_109">
+            <field name="name">Razon Referencia</field>
+            <field name="description">Razon Referencia</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">90</field>
+            <field name="seccion">3</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">90</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_110">
+            <field name="name">Glosa</field>
+            <field name="description">Glosa</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">30</field>
+            <field name="seccion">5</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">60</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_111">
+            <field name="name">xFono</field>
+            <field name="description">xFono</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">130</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">50</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_112">
+            <field name="name">xNumInt</field>
+            <field name="description">xNumInt</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">140</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">50</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_113">
+            <field name="name">Tipo Monedas</field>
+            <field name="description">Tipo Monedas</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">20</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">15</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_114">
+            <field name="name">Ind. de No Rebaja</field>
+            <field name="description">Ind. de No Rebaja</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">50</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">1</field>
+
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_115">
+            <field name="name">Monto Bruto</field>
+            <field name="description">Monto Bruto</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">100</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">1</field>
+
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_116">
+            <field name="name">Forma de Pago</field>
+            <field name="description">Forma de Pago</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">110</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">1</field>
+
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_117">
+            <field name="name">Forma de Pago Exp</field>
+            <field name="description">Forma de Pago Exp</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">130</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">2</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_118">
+            <field name="name">Monto Cancelado</field>
+            <field name="description">Monto Cancelado</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">150</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_119">
+            <field name="name">Saldo Insoluto</field>
+            <field name="description">Saldo Insoluto</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">160</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_120">
+            <field name="name">Monto de Pago</field>
+            <field name="description">Monto de Pago</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">180</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_121">
+            <field name="name">Dias Term. Pago</field>
+            <field name="description">Dias Term. Pago</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">280</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">3</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_122">
+            <field name="name">Acteco</field>
+            <field name="description">Acteco</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">350</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">6</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_123">
+            <field name="name">Codigo Traslado</field>
+            <field name="description">Codigo Traslado</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">360</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">1</field>
+
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_124">
+            <field name="name">Folio Autorizacion</field>
+            <field name="description">Folio Autorizacion</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">370</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">5</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_125">
+            <field name="name">Codigo sucursal</field>
+            <field name="description">Codigo sucursal</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">400</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">9</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_126">
+            <field name="name">Cod. Moneda Venta</field>
+            <field name="description">Cod. Moneda Venta</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">80</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">2</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_127">
+            <field name="name">Cod. Clausula Venta</field>
+            <field name="description">Cod. Clausula Venta</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">90</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">2</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_128">
+            <field name="name">Total Clausula Venta</field>
+            <field name="description">Total Clausula Venta</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">100</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_129">
+            <field name="name">Cod. Via Transporte</field>
+            <field name="description">Cod. Via Transporte</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">110</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">2</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_130">
+            <field name="name">Cod. Puerto Embarque</field>
+            <field name="description">Cod. Puerto Embarque</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">180</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">4</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_131">
+            <field name="name">Cod. Puerto Desembarque</field>
+            <field name="description">Cod. Puerto Desembarque</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">200</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">4</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_132">
+            <field name="name">Tara</field>
+            <field name="description">Tara</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">220</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">7</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_133">
+            <field name="name">Cod. Un Medida Tara</field>
+            <field name="description">Cod. Un Medida Tara</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">230</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">2</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_134">
+            <field name="name">Peso Bruto</field>
+            <field name="description">Peso Bruto</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">240</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">12</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_135">
+            <field name="name">Cod. Un Peso Bruto</field>
+            <field name="description">Cod. Un Peso Bruto</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">250</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">2</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_136">
+            <field name="name">Peso Neto</field>
+            <field name="description">Peso Neto</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">260</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">12</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_137">
+            <field name="name">Cod. Un Peso Neto</field>
+            <field name="description">Cod. Un Peso Neto</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">270</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">2</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_138">
+            <field name="name">Total Items</field>
+            <field name="description">Total Items</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">280</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_139">
+            <field name="name">Total Bultos</field>
+            <field name="description">Total Bultos</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">290</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_140">
+            <field name="name">Cod. Tipo Bultos</field>
+            <field name="description">Cod. Tipo Bultos</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">300</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">3</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_141">
+            <field name="name">Cant. Bultos</field>
+            <field name="description">Cant. Bultos</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">310</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_142">
+            <field name="name">Monto Neto</field>
+            <field name="description">Monto Neto</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">20</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_143">
+            <field name="name">Monto Base</field>
+            <field name="description">Monto Base</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">40</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_144">
+            <field name="name">Monto Margen</field>
+            <field name="description">Monto Margen</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">50</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_145">
+            <field name="name">Tasa IVA</field>
+            <field name="description">Tasa IVA</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">60</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">5</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_146">
+            <field name="name">IVA</field>
+            <field name="description">IVA</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">70</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_147">
+            <field name="name">IVA propio</field>
+            <field name="description">IVA propio</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">80</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_148">
+            <field name="name">IVA terceros</field>
+            <field name="description">IVA terceros</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">90</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_149">
+            <field name="name">Tasa Impuesto</field>
+            <field name="description">Tasa Impuesto</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">110</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">5</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_150">
+            <field name="name">Monto Impuesto</field>
+            <field name="description">Monto Impuesto</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">120</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_151">
+            <field name="name">Iva No Retenido</field>
+            <field name="description">Iva No Retenido</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">130</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_152">
+            <field name="name">Cred. Empresas Constructoras</field>
+            <field name="description">Cred. Empresas Constructoras</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">140</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_153">
+            <field name="name">Garantia Deposito</field>
+            <field name="description">Garantia Deposito</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">150</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_154">
+            <field name="name">Comisiones Neto</field>
+            <field name="description">Comisiones Neto</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">160</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_155">
+            <field name="name">Comisiones Exento</field>
+            <field name="description">Comisiones Exento</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">170</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_156">
+            <field name="name">Comisiones Iva</field>
+            <field name="description">Comisiones Iva</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">180</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_157">
+            <field name="name">Monto No Facturable</field>
+            <field name="description">Monto No Facturable</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">200</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_158">
+            <field name="name">Monto Periodo</field>
+            <field name="description">Monto Periodo</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">210</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_159">
+            <field name="name">Saldo Anterior</field>
+            <field name="description">Saldo Anterior</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">220</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_160">
+            <field name="name">Valor a Pagar</field>
+            <field name="description">Valor a Pagar</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">230</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_161">
+            <field name="name">Tipo DTE</field>
+            <field name="description">Tipo DTE</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">20</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">integer</field>
+            <field name="largo">3</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_162">
+            <field name="name">Valor Dolar TC</field>
+            <field name="description">Valor Dolar TC</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">70</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_163">
+            <field name="name">Subtotal Dolar</field>
+            <field name="description">Subtotal Dolar</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">80</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_164">
+            <field name="name">Tipo Cambio</field>
+            <field name="description">Tipo Cambio</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">30</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_165">
+            <field name="name">Monto Neto OM</field>
+            <field name="description">Monto Neto OM</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">40</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_166">
+            <field name="name">Monto Exento OM</field>
+            <field name="description">Monto Exento OM</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">50</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_167">
+            <field name="name">Monto Fae Carne OM</field>
+            <field name="description">Monto Fae Carne OM</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">60</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_168">
+            <field name="name">Monto Margen Comer. OM</field>
+            <field name="description">Monto Margen Comer. OM</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">70</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_169">
+            <field name="name">IVA OM</field>
+            <field name="description">IVA OM</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">80</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">0</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_170">
+            <field name="name">Tasa Impuesto OM</field>
+            <field name="description">Tasa Impuesto OM</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">110</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">5</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_171">
+            <field name="name">Monto Impuesto OM</field>
+            <field name="description">Monto Impuesto OM</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">120</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_172">
+            <field name="name">Iva No Retenido OM</field>
+            <field name="description">Iva No Retenido OM</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">130</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_173">
+            <field name="name">Monto Total OM</field>
+            <field name="description">Monto Total OM</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">140</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_174">
+            <field name="name">Nro.Linea</field>
+            <field name="description">Nro.Linea</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">10</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">4</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_175">
+            <field name="name">Indicador Exencion</field>
+            <field name="description">Indicador Exencion</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">50</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">1</field>
+
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_176">
+            <field name="name">Monto Base Faenamiento</field>
+            <field name="description">Monto Base Faenamiento</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">80</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_177">
+            <field name="name">Monto margen Comercializacion</field>
+            <field name="description">Monto margen Comercializacion</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">90</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_178">
+            <field name="name">Precio Consumidor Final</field>
+            <field name="description">Precio Consumidor Final</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">100</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_179">
+            <field name="name">Cantidad Referencia</field>
+            <field name="description">Cantidad Referencia</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">130</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_180">
+            <field name="name">Precio Referencia</field>
+            <field name="description">Precio Referencia</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">150</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_181">
+            <field name="name">Monto Flete</field>
+            <field name="description">Monto Flete</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">360</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_182">
+            <field name="name">Cantidad</field>
+            <field name="description">Cantidad</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">180</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_183">
+            <field name="name">Sub Cantidad</field>
+            <field name="description">Sub Cantidad</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">200</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_184">
+            <field name="name">Codigo Subcantidad</field>
+            <field name="description">Codigo Subcantidad</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">210</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_185">
+            <field name="name">Precio Unitario Item</field>
+            <field name="description">Precio Unitario Item</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">260</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_186">
+            <field name="name">Precio Unitario Item OM</field>
+            <field name="description">Precio Unitario Item OM</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">280</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_187">
+            <field name="name">Factor Conversion</field>
+            <field name="description">Factor Conversion</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">300</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_188">
+            <field name="name">Descuento OM</field>
+            <field name="description">Descuento OM</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">310</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_189">
+            <field name="name">Recargo OM</field>
+            <field name="description">Recargo OM</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">320</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_190">
+            <field name="name">Monto Item OM</field>
+            <field name="description">Monto Item OM</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">330</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_191">
+            <field name="name">Descuento %</field>
+            <field name="description">Descuento %</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">340</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">5</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_192">
+            <field name="name">Monto Descuento</field>
+            <field name="description">Monto Descuento</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">350</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_193">
+            <field name="name">Valor Descuento</field>
+            <field name="description">Valor Descuento</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">380</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_194">
+            <field name="name">Recargo %</field>
+            <field name="description">Recargo %</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">390</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">5</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_195">
+            <field name="name">Recargo Monto</field>
+            <field name="description">Recargo Monto</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">400</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_196">
+            <field name="name">Valor Recargo</field>
+            <field name="description">Valor Recargo</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">430</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_197">
+            <field name="name">Monto Item</field>
+            <field name="description">Monto Item</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">450</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_198">
+            <field name="name">N° Sub Total</field>
+            <field name="description">N° Sub Total</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">10</field>
+            <field name="seccion">6</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">2</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_199">
+            <field name="name">Orden Sub Total</field>
+            <field name="description">Orden Sub Total</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">30</field>
+            <field name="seccion">6</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">2</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_200">
+            <field name="name">Neto Sub Total</field>
+            <field name="description">Neto Sub Total</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">40</field>
+            <field name="seccion">6</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_201">
+            <field name="name">IVA Sub Total</field>
+            <field name="description">IVA Sub Total</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">50</field>
+            <field name="seccion">6</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_202">
+            <field name="name">Imp. Adic. Sub Total</field>
+            <field name="description">Imp. Adic. Sub Total</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">60</field>
+            <field name="seccion">6</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_203">
+            <field name="name">Exento Sub Total</field>
+            <field name="description">Exento Sub Total</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">70</field>
+            <field name="seccion">6</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_204">
+            <field name="name">Valor Linea Sub Total</field>
+            <field name="description">Valor Linea Sub Total</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">80</field>
+            <field name="seccion">6</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_205">
+            <field name="name">Nro Lineas Sub Total</field>
+            <field name="description">Nro Lineas Sub Total</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">90</field>
+            <field name="seccion">6</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">2</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_206">
+            <field name="name">Nro Desc. Recargo</field>
+            <field name="description">Nro Desc. Recargo</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">10</field>
+            <field name="seccion">4</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">2</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_207">
+            <field name="name">Valor Desc. Recargo</field>
+            <field name="description">Valor Desc. Recargo</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">50</field>
+            <field name="seccion">4</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_208">
+            <field name="name">Valor Desc. Recargo OM</field>
+            <field name="description">Valor Desc. Recargo OM</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">60</field>
+            <field name="seccion">4</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_209">
+            <field name="name">Indicador Exencion Desc. Recargo</field>
+            <field name="description">Indicador Exencion Desc. Recargo</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">70</field>
+            <field name="seccion">4</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">1</field>
+
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_210">
+            <field name="name">Nro Linea Referencia</field>
+            <field name="description">Nro Linea Referencia</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">10</field>
+            <field name="seccion">3</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">2</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_211">
+            <field name="name">Indicador Referencia Global</field>
+            <field name="description">Indicador Referencia Global</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">30</field>
+            <field name="seccion">3</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">1</field>
+
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_212">
+            <field name="name">Codigo Referencia</field>
+            <field name="description">Codigo Referencia</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">80</field>
+            <field name="seccion">3</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">1</field>
+
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_213">
+            <field name="name">Nro Linea Comisiones</field>
+            <field name="description">Nro Linea Comisiones</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">10</field>
+            <field name="seccion">5</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">2</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_214">
+            <field name="name">Tasa Comision</field>
+            <field name="description">Tasa Comision</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">40</field>
+            <field name="seccion">5</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">4</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_215">
+            <field name="name">Valor Neto Comision</field>
+            <field name="description">Valor Neto Comision</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">50</field>
+            <field name="seccion">5</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_216">
+            <field name="name">Valor Exento Comision</field>
+            <field name="description">Valor Exento Comision</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">60</field>
+            <field name="seccion">5</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_217">
+            <field name="name">Valor IVA Comision</field>
+            <field name="description">Valor IVA Comision</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">70</field>
+            <field name="seccion">5</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_218">
+            <field name="name">Monto Seguro</field>
+            <field name="description">Monto Seguro</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">370</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_219">
+            <field name="name">xFechaTipoCambio</field>
+            <field name="description">xFechaTipoCambio</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">150</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">date</field>
+            <field name="largo">10</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_220">
+            <field name="name">xPersonalizado2</field>
+            <field name="description">xPersonalizado2</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">210</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">50</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_221">
+            <field name="name">xPersonalizado1</field>
+            <field name="description">xPersonalizado1</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">200</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">50</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_222">
+            <field name="name">xPersonalizado3</field>
+            <field name="description">xPersonalizado3</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">220</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">50</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_223">
+            <field name="name">xPersonalizado4</field>
+            <field name="description">xPersonalizado4</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">230</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">50</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_224">
+            <field name="name">Tipo Movim</field>
+            <field name="description">Tipo Movim</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">20</field>
+            <field name="seccion">5</field>
+            <field name="tipo_dato">string</field>
+            <field name="largo">1</field>
+
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_225">
+            <field name="name">Tipo Documento Liq</field>
+            <field name="description">Tipo Documento Liq</field>
+            <field name="tipo_doc">0</field>
+            <field name="pais">CL</field>
+            <field name="orden">45</field>
+            <field name="seccion">2</field>
+            <field name="tipo_dato">integer</field>
+            <field name="largo">3</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_226">
+            <field name="name">Monto Exento</field>
+            <field name="description">Monto Exento</field>
+            <field name="tipo_doc">112</field>
+            <field name="pais">CL</field>
+            <field name="orden">30</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_227">
+            <field name="name">Monto Exento</field>
+            <field name="description">Monto Exento</field>
+            <field name="tipo_doc">110</field>
+            <field name="pais">CL</field>
+            <field name="orden">30</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_228">
+            <field name="name">Monto Exento</field>
+            <field name="description">Monto Exento</field>
+            <field name="tipo_doc">111</field>
+            <field name="pais">CL</field>
+            <field name="orden">30</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_229">
+            <field name="name">Monto Total</field>
+            <field name="description">Monto Total</field>
+            <field name="tipo_doc">33</field>
+            <field name="pais">CL</field>
+            <field name="orden">190</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">integer</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_230">
+            <field name="name">Monto Total</field>
+            <field name="description">Monto Total</field>
+            <field name="tipo_doc">34</field>
+            <field name="pais">CL</field>
+            <field name="orden">190</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">integer</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_231">
+            <field name="name">Monto Total</field>
+            <field name="description">Monto Total</field>
+            <field name="tipo_doc">39</field>
+            <field name="pais">CL</field>
+            <field name="orden">190</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">integer</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_232">
+            <field name="name">Monto Total</field>
+            <field name="description">Monto Total</field>
+            <field name="tipo_doc">41</field>
+            <field name="pais">CL</field>
+            <field name="orden">190</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">integer</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_233">
+            <field name="name">Monto Total</field>
+            <field name="description">Monto Total</field>
+            <field name="tipo_doc">43</field>
+            <field name="pais">CL</field>
+            <field name="orden">190</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">integer</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_234">
+            <field name="name">Monto Total</field>
+            <field name="description">Monto Total</field>
+            <field name="tipo_doc">46</field>
+            <field name="pais">CL</field>
+            <field name="orden">190</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">integer</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_235">
+            <field name="name">Monto Total</field>
+            <field name="description">Monto Total</field>
+            <field name="tipo_doc">52</field>
+            <field name="pais">CL</field>
+            <field name="orden">190</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">integer</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_236">
+            <field name="name">Monto Total</field>
+            <field name="description">Monto Total</field>
+            <field name="tipo_doc">56</field>
+            <field name="pais">CL</field>
+            <field name="orden">190</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">integer</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_237">
+            <field name="name">Monto Total</field>
+            <field name="description">Monto Total</field>
+            <field name="tipo_doc">61</field>
+            <field name="pais">CL</field>
+            <field name="orden">190</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">integer</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_238">
+            <field name="name">Monto Exento</field>
+            <field name="description">Monto Exento</field>
+            <field name="tipo_doc">56</field>
+            <field name="pais">CL</field>
+            <field name="orden">30</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">integer</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_239">
+            <field name="name">Monto Exento</field>
+            <field name="description">Monto Exento</field>
+            <field name="tipo_doc">33</field>
+            <field name="pais">CL</field>
+            <field name="orden">30</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">integer</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_240">
+            <field name="name">Monto Exento</field>
+            <field name="description">Monto Exento</field>
+            <field name="tipo_doc">34</field>
+            <field name="pais">CL</field>
+            <field name="orden">30</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">integer</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_241">
+            <field name="name">Monto Exento</field>
+            <field name="description">Monto Exento</field>
+            <field name="tipo_doc">39</field>
+            <field name="pais">CL</field>
+            <field name="orden">30</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">integer</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_242">
+            <field name="name">Monto Exento</field>
+            <field name="description">Monto Exento</field>
+            <field name="tipo_doc">41</field>
+            <field name="pais">CL</field>
+            <field name="orden">30</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">integer</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_243">
+            <field name="name">Monto Exento</field>
+            <field name="description">Monto Exento</field>
+            <field name="tipo_doc">43</field>
+            <field name="pais">CL</field>
+            <field name="orden">30</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">integer</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_244">
+            <field name="name">Monto Exento</field>
+            <field name="description">Monto Exento</field>
+            <field name="tipo_doc">46</field>
+            <field name="pais">CL</field>
+            <field name="orden">30</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">integer</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_245">
+            <field name="name">Monto Exento</field>
+            <field name="description">Monto Exento</field>
+            <field name="tipo_doc">52</field>
+            <field name="pais">CL</field>
+            <field name="orden">30</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">integer</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_246">
+            <field name="name">Monto Exento</field>
+            <field name="description">Monto Exento</field>
+            <field name="tipo_doc">61</field>
+            <field name="pais">CL</field>
+            <field name="orden">30</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">integer</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_247">
+            <field name="name">Monto Total</field>
+            <field name="description">Monto Total</field>
+            <field name="tipo_doc">110</field>
+            <field name="pais">CL</field>
+            <field name="orden">190</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_248">
+            <field name="name">Monto Total</field>
+            <field name="description">Monto Total</field>
+            <field name="tipo_doc">111</field>
+            <field name="pais">CL</field>
+            <field name="orden">190</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+
+        <record model="bcn.dictionaryfud" id="bcn_diccionario_249">
+            <field name="name">Monto Total</field>
+            <field name="description">Monto Total</field>
+            <field name="tipo_doc">112</field>
+            <field name="pais">CL</field>
+            <field name="orden">190</field>
+            <field name="seccion">1</field>
+            <field name="tipo_dato">float</field>
+            <field name="largo">18</field>
+        </record>
+    </data>
+</odoo>

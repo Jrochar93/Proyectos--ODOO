@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_tax_form_inherited" model="ir.ui.view">
+        <field name="name">account.tax.form.inherited</field>
+        <field name="model">account.tax</field>
+        <field name="inherit_id" ref="account.view_tax_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <!-- Tu modificación específica para el modelo account.tax -->
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="imp_tipo" />
+                    <field name="imp_codigo" />
+                </xpath>
+                
+            </data>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="group_bcn_fel_co" model="res.groups">
+        <field name="name">BCN / FEL Colombia</field>
+    </record>
+    <record id="model_bcn_fud_co_access" model="ir.model.access">
+        <field name="name">invoice.fud.co.access</field>
+        <field name="model_id" ref="model_bcn_fud_co"/>
+        <field name="group_id" ref="group_bcn_fel_co"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/> 
+        <field name="perm_unlink" eval="True"/>
+    </record>
+</odoo>

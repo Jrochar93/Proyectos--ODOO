@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form_inherited" model="ir.ui.view">
+        <field name="name">res.partner.form.inherited</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='name']" position="after">
+                    
+                </xpath>
+                <xpath expr="//notebook"  colspan="4" position="inside">
+                    <page name="Factura_Electrónica" string="Factura_Electrónica">
+                        <group>
+                            
+                            <group>
+                                <field name="tercero_respon" />                            
+                                <field name="tercero_tipo_emp" />
+                                <field name="tercero_regimen" />
+                                
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </data>
+        </field>
+    </record>
+</odoo>
