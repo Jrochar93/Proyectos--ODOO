@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <odoo>
+    <!-- Top menu item -->
+    <menuitem name="Transporte"
+        id="menu_trk_guide_mp"
+        web_icon="mp_tracking_carrier,static/description/icon.png"
+        groups="group_user_track_guide,group_admin_track_guide"
+        sequence="2">
+            <menuitem id="menu_trk_guide_rpt_mp" name="Seguimiento" sequence="1">
+              <menuitem id="sub_menu_trk_guide_mp" name="Seguimiento" action="action_trk_guide_rpt_mp" groups="group_user_track_guide,group_admin_track_guide" sequence="0"/>
+
+              <menuitem id="sub_menu_mptck_assign_guide_sale" name="Asignar Transportadora/Guía" action="mp_inventory.action_wz_assigned_guide_stock" sequence="88" groups="mp_inventory.group_update_guide_sale_inv_mp,base.group_system"/>
+            </menuitem>
+
+    </menuitem>
+
+    <menuitem id="menu_trk_guide_sac_mp"
+              name="Seguimiento SAC"
+              action="action_trk_guide_sac_rpt"
+              parent="menu_trk_guide_mp"
+              sequence="2"
+              groups="group_user_track_guide,group_admin_track_guide"/>
+    
+</odoo>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sale_trk_guide_mp_view_tree" model="ir.ui.view">
+        <field name="name">sale.inv.rpt.mp.view.tree</field>
+        <field name="model">sale.order.trk.guide.carrier.report</field>
+        <field name="arch" type="xml">
+            <tree string="Seguimiento Envios" create="false" delete="false">
+                <field name="n_oc" />
+                <field name="sale_order_id" />
+                <field name="state_order" />
+                <field name="date_order" optional="show"/>
+                <field name="state_picking" />
+                <field name="partner_id" />
+                <field name="partner_shipping_id" />
+                <field name="phone_partner" />
+                <field name="street_shipping" />
+                <field name="street2_shipping" optional="hidden" />
+                <field name="city_id" />
+                <field name="date_min_order" />
+                <field name="date_max_order" />
+                <field name="date_scheduled_time_ol" />
+                <field name="date_unique_delivey_mp" />
+                <field name="carrier_id" />
+                <field name="guide_order" />
+                <field name="team_id_order" optional="hidden"/>
+                <field name="channel_sale_order" optional="hidden"/>
+                <field name="number_of_packages" />
+                <field name="qty_delivered_order" />
+                <field name="price_subtotal_order" />
+                <field name="mp_valor_declarado" /> 
+                
+            </tree>
+        </field>
+    </record>
+    
+    <record id="action_trk_guide_rpt_mp" model="ir.actions.act_window">
+        <field name="name">Seguimiento Envios</field>
+        <field name="res_model">sale.order.trk.guide.carrier.report</field>
+        <field name="view_mode">tree</field>
+        <field name="context">{}</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('sale_trk_guide_mp_view_tree')}),
+            ]"/>
+    </record>
+
+
+</odoo>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data noupdate="0">
+        <record model="ir.module.category" id="mp_tracking_carrier.cat_track_guide">
+            <field name="name">Seguimiento de Guías</field>
+            <field name="description">Oepraciones de integración VTEX</field>
+            <field name="sequence">15</field>
+        </record>
+
+		<record id="group_user_track_guide" model="res.groups">
+			<field name="name">Usuario consulta</field>
+			<field name="category_id" ref="mp_tracking_carrier.cat_track_guide"/>
+		</record>
+		<record id="group_admin_track_guide" model="res.groups">
+			<field name="name">Administración</field>
+			<field name="category_id" ref="mp_tracking_carrier.cat_track_guide"/>
+		</record>
+		<record id="group_admin_sac_track_guide" model="res.groups">
+			<field name="name">Administración Seguimiento SAC</field>
+			<field name="category_id" ref="mp_tracking_carrier.cat_track_guide"/>
+		</record>
+	
+	</data>
+</openerp>
