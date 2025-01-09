@@ -1,0 +1,189 @@
+<odoo>
+  <data>
+
+        <record id="vtex_orders_payments_view_tree" model="ir.ui.view">
+            <field name="name">vtex.orders.payments.view.tree</field>
+            <field name="model">vtex.orders.payments</field>
+            <field name="arch" type="xml">
+                <tree string="Pagos de pedidos">
+                        <field name="name" />
+                        <field name="amount" />
+                        <field name="date" />
+                        <field name="partner_id" />
+                        <field name="order_vtex_id" />
+                        <field name="total_amount" />
+                        <field name="invoice_id" />
+                        <field name="payment_id" />
+                        <field name="total_amount_pay"  invisible="1"/>
+                        
+                        <field name="total_commision_pay" />
+                        <field name="total_shipping_pay" />
+                        <field name="total_chargue_shipp_pay" />
+                        
+                        <field name="total_fee_pay" />
+                        <field name="total_tax_pay" />
+
+                        <field name="total_ica_pay" />
+                        <field name="total_rtefuente_pay" />
+                </tree> 
+            </field>
+        </record>
+
+        <record id="vtex_orders_pay_view_view_form" model="ir.ui.view">
+            <field name="name">vtex.orders.payments.view.form</field>
+            <field name="model">vtex.orders.payments</field>
+            <field name="arch" type="xml">
+                <form string="Pagos de pedidos">
+                    <header>
+                        <button string="Aplicar Pago" name="apply_payment" type="object" class="oe_highlight" states="draft,error"/>
+                        <button string="Conciliar Pago" name="reconciliate_payment" type="object" class="oe_highlight" states="draft,error"/>
+                        <button string="Confirmar Pago" name="confirm_payment" type="object" class="oe_highlight" states="draft,error"/>
+                        <button string="Sync Pago" name="sync_payment" type="object" class="oe_highlight" states="draft,error"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,validate,error,cancel" />
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" readonly="1" force_save="1" />
+                                <field name="state_pay" readonly="1" force_save="1" />
+                                <field name="amount" readonly="1" force_save="1" />
+                                <field name="date" readonly="1" force_save="1" />
+                                <field name="partner_id" readonly="1" force_save="1" />
+                                <field name="order_vtex_id" readonly="1" force_save="1"  />
+                                <field name="sale_order_id" readonly="1" force_save="1"  />
+                                <field name="invoice_id" readonly="1" force_save="1" />
+
+                                <field name="payment_id" readonly="1" force_save="1" />
+                            </group>
+                            <group>
+                                <field name="total_amount" />
+                                <field name="total_amount_pay"  invisible="0"/>
+                                
+                                <field name="total_commision_pay" />
+                                <field name="total_shipping_pay" />
+                                <field name="total_chargue_shipp_pay" />
+                                <field name="total_fee_pay" />
+                                <field name="total_tax_pay" />
+
+                                <field name="total_ica_pay" />
+                                <field name="total_rtefuente_pay" />
+
+                                <field name="total_amount_calculated" invisible="1"/>
+                                <field name="total_amount_calculated_add" invisible="1" />
+
+                            </group>
+                        </group>
+                    </sheet>
+                    <!-- Chatter -->
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" groups="base.group_user"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        
+
+
+      <record id="vtex_orders_payments_action" model="ir.actions.act_window">
+          <field name="name">Pagos de pedidos</field>
+          <field name="res_model">vtex.orders.payments</field>
+          <field name="view_mode">tree,form</field>
+          <field name="domain">[]</field>
+          <!--<field name="context">{"search_default_group_level":1}</field>
+          <field name="search_view_id" ref="view_sale_channels_filter"/>-->
+      </record>
+
+
+       <record id="vtex_ord_pay_items_view_tree" model="ir.ui.view">
+            <field name="name">vtex.orders.payments.items.view.tree</field>
+            <field name="model">vtex.orders.payments.items</field>
+            <field name="arch" type="xml">
+                <tree string="Lista de pago de ordenes">
+                    <field name="name" />
+                    <field name="id_oper_payment_market" />
+                    <field name="code_account_seller" />
+            
+                    <field name="type_medium_pay" />
+                    <field name="medium_pay" />
+                    <field name="country_origin_pay" />
+
+                    <field name="value_sale_pay" />
+                    <field name="currency_pay" />
+                    <field name="date_sale_pay" />
+
+                </tree> 
+            </field>
+        </record>
+
+        <record id="vtex_ord_pay_items_view_view_form" model="ir.ui.view">
+            <field name="name">vtex.orders.payments.items.view.form</field>
+            <field name="model">vtex.orders.payments.items</field>
+            <field name="arch" type="xml">
+                <form string="Lista de pagos de ordenes">
+                    <sheet>
+                    <group name="payment_1" string="Datos">
+                        <group>
+                                <field name="name" />
+                                <field name="id_oper_payment_market" />
+                                <field name="code_account_seller" />
+
+                                <field name="type_medium_pay" />
+                                <field name="medium_pay" />
+                                <field name="country_origin_pay" />
+
+                                <field name="value_sale_pay" />
+                                <field name="currency_pay" />
+                                <field name="date_sale_pay" />                      
+                        </group>
+                        <group>
+                                <field name="commission_tax_pay" />
+                                <field name="amount_oper_sale_pay" />
+                                <field name="currency_settlement_pay" />
+
+                                <field name="date_approve_pay" />
+                                <field name="amount_net_oper_pay" />
+                                <field name="data_extra" />
+
+                                <field name="commision_meli_tax_pay" />
+                                <field name="cost_shipping_pay" />
+                                <field name="chargue_shipping_pay" />
+                                
+                                <field name="taxes_charged_pay" />                      
+                        </group>
+
+                          <group>
+                                <field name="id_orden_meli_pay" />
+                                <field name="id_ref_shipping_pay" />
+                                <field name="mode_shipping_pay" />
+
+                                <field name="id_ref_package_pay" />
+                                <field name="tax_details_pay" />
+                                <field name="number_inital_target_pay" />
+
+                                <field name="sale_channel_pay" />
+                                <field name="platform_payment_pay" />
+                        </group>
+                        
+                    </group>
+                    
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+      <record id="vtex_ord_pay_items_action" model="ir.actions.act_window">
+          <field name="name">Lista Pagos de ordenes</field>
+          <field name="res_model">vtex.orders.payments.items</field>
+          <field name="view_mode">tree,form</field>
+          <field name="domain">[]</field>
+          <!--<field name="context">{"search_default_group_level":1}</field>
+          <field name="search_view_id" ref="view_sale_channels_filter"/>-->
+      </record>
+
+  </data>
+</odoo>

@@ -1,0 +1,203 @@
+<odoo>
+  <data>
+
+    <record id="vtex_validator_products_view_form" model="ir.ui.view">
+      <field name="name">vtex.validator.products.view.form</field>
+      <field name="model">vtex.validator.products</field>
+      <field name="arch" type="xml">
+        <form string="Validator Products">
+            <header>
+                   <button name="button_draft" string="To Draft" type="object" attrs="{'invisible' : ['|', ('id', '=', False), ('state', '=', 'draft')]}"/>
+                   <button name="button_validate" string="Validate" type="object" attrs="{'invisible' : [('state', '=', 'validate')]}"/>
+                  <field name="state" widget="statusbar" statusbar_visible="draft,validate"/>
+            </header>
+          <sheet>
+            <group>
+                <field name="name" />
+                <field name="type_interface" />
+                <field name="model_id" />
+                <field name="name_model" />
+                
+                <field name="field_products_ids"  widget="many2many_tags" 
+                domain="[('model', '=', name_model)]"
+                />
+                <field name="type_request" />
+                <field name="field_mapped_ids"   >
+
+                  <tree editable="top">
+                    <field name="field_id" />
+                    <field name="name_technical" />
+                    <field name="name_vtex" />
+                  </tree>
+                </field>
+                
+            </group>
+          </sheet>
+           <!-- Chatter -->
+            <div class="oe_chatter">
+                <field name="message_follower_ids" groups="base.group_user"/>
+                <field name="activity_ids"/>
+                <field name="message_ids"/>
+            </div>
+          
+        </form>
+      </field>
+    </record>
+
+      <record id="vtex_validator_products_tree" model="ir.ui.view">
+        <field name="name">vtex.validator.products.view.tree</field>
+        <field name="model">vtex.validator.products</field>
+        <field name="arch" type="xml">
+          <tree string="Validator Products">
+                <field name="name" />
+                <field name="type_interface" />
+                <field name="type_request" />
+          </tree>
+        </field>
+      </record>
+      <record id="vtex_validator_products_action" model="ir.actions.act_window">
+          <field name="name">Validator Products</field>
+          <field name="res_model">vtex.validator.products</field>
+          <field name="view_mode">tree,form</field>
+          <field name="domain">[]</field>
+          <!--<field name="context">{"search_default_group_level":1}</field>
+          <field name="search_view_id" ref="view_sale_channels_filter"/>-->
+      </record>
+
+
+      <!--Request-->
+
+    <record id="vtex_operations_request_view_form" model="ir.ui.view">
+      <field name="name">vtex.operations.request.view.form</field>
+      <field name="model">vtex.operations.request</field>
+      <field name="arch" type="xml">
+        <form string="Operations Request">
+          <sheet>
+            <group>
+                <field name="name" />
+                <field name="type_interface" />
+
+                <field name="type_request" />
+                <field name="fields_request" />
+
+            </group>
+          </sheet>
+           <!-- Chatter -->
+            <div class="oe_chatter">
+                <field name="message_follower_ids" groups="base.group_user"/>
+                <field name="activity_ids"/>
+                <field name="message_ids"/>
+            </div>
+          
+        </form>
+      </field>
+    </record>
+
+
+
+      <record id="vtex_operations_request_tree" model="ir.ui.view">
+        <field name="name">vtex.operations.request.view.tree</field>
+        <field name="model">vtex.operations.request</field>
+        <field name="arch" type="xml">
+          <tree string="Operations Request">
+                <field name="name" />
+                <field name="type_interface" />
+                <field name="type_request" />
+                <field name="fields_request" />
+
+          </tree>
+        </field>
+      </record>
+      <record id="vtex_operations_request_action" model="ir.actions.act_window">
+          <field name="name">Operations Request</field>
+          <field name="res_model">vtex.operations.request</field>
+          <field name="view_mode">tree,form</field>
+          <field name="domain">[]</field>
+      </record>
+
+      <!--Operations-->
+
+    <record id="vtex_sync_operations_view_form" model="ir.ui.view">
+      <field name="name">vtex.sync.operations.view.form</field>
+      <field name="model">vtex.sync.operations</field>
+      <field name="arch" type="xml">
+        <form string="Sync Operations">
+          <header>
+            <button string="Sincronizar" name="sync_op" type="object" class="oe_highlight" attrs="{'invisible' : [('state', '=', 'validate')]}"/>
+            <button name="action_cancel" string="Cancelar" type="object" states="draft,close" />
+            <field name="state" widget="statusbar" statusbar_visible="draft,validate,error,cancel" />
+            <button name="update_specs" string="Update Specs" type="object" attrs="{'invisible' : [('state', '=', 'validate')]}"/>
+            <field name="sync_ok" invisible="1" />
+          </header>
+          <sheet>
+            <group>
+                <field name="name" readonly="1" force_save="1"/>
+                <field name="type_interface" readonly="1" force_save="1"/>
+                <field name="type_request" readonly="1" force_save="1"/>
+                <field name="ref" readonly="1" force_save="1" />
+                <field name="id_ref_model" readonly="1" force_save="1" invisible="0"/>
+                <field name="id_ref_sync" readonly="1" force_save="1" invisible="0"/>
+                <field name="id_ref_sync_other" readonly="1" force_save="1" invisible="0"/>
+            </group>
+
+            <group name="field_add" string="Fields">
+
+              <field name="op_fields_ids" nolabel="1">
+                  <tree create="false" edit="false" delete="false">
+                      <field name="name" invisible="1"/>
+                      <field name="type_request" invisible="1"/>
+                      <field name="state" invisible="1"/>
+                      <field name="sync_op_id" invisible="1"/>
+
+                      <field name="field_old_id" invisible="0"/>
+                      <field name="field_old_name" invisible="1"/>
+                      <field name="field_old_tag" />
+                      <field name="field_old_value" />
+
+                      <field name="field_new_id" invisible="0"/>
+                      <field name="field_new_name" invisible="1"/>
+                      <field name="field_new_tag" />
+                      <field name="field_new_value" />
+                  </tree>
+              </field>
+              
+            </group>
+
+            <group>
+                <field name="json_request" />
+                <field name="json_response" />
+            </group>
+          </sheet>
+          <!-- Chatter -->
+          <div class="oe_chatter">
+              <field name="message_follower_ids" groups="base.group_user"/>
+              <field name="activity_ids"/>
+              <field name="message_ids"/>
+          </div>
+        </form>
+      </field>
+    </record>
+
+      <record id="vtex_sync_operations_tree" model="ir.ui.view">
+        <field name="name">vtex.sync.operations.view.tree</field>
+        <field name="model">vtex.sync.operations</field>
+        <field name="arch" type="xml">
+          <tree string="Sync Operations">
+                <field name="name" />
+                <field name="type_interface" />
+                <field name="type_request" />
+
+          </tree>
+        </field>
+      </record>
+      <record id="vtex_sync_operations_action" model="ir.actions.act_window">
+          <field name="name">Sync Operations</field>
+          <field name="res_model">vtex.sync.operations</field>
+          <field name="view_mode">tree,form</field>
+          <field name="domain">[]</field>
+      </record>
+
+
+
+  </data>
+</odoo>

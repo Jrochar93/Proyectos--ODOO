@@ -1,0 +1,126 @@
+<odoo>
+    <data>
+        <record id="product_template_only_form_view_vtex" model="ir.ui.view">
+            <field name="name">product.template.view.form.inherit.vtex</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+
+
+                <xpath expr="//page[4]" position="after">
+                    <page name="vtex_page" string="E-commerce" groups="mp_odoo_vtex.group_user_vtex,mp_odoo_vtex.group_admin_vtex">
+                        <group col="12">
+                            <button name="request_create_product" type="object" string="Enviar a VTEX"  class="oe_highlight" attrs="{'invisible': [('ref_id_vtex', '!=', False)]}"/>
+                            <button name="update_vtex" type="object" string="Actualizar en VTEX"  class="oe_highlight" attrs="{'invisible': [('vtex', '!=', True)]}" invisible="1"/>
+                            <button name="search_id_vtex" type="object" string="Buscar en VTEX"  class="oe_highlight" />
+                            <button name="request_create_product_sku" type="object" string="Crear SKU"  class="oe_highlight" attrs="{'invisible': [('is_sku_mp', '!=', False)]}"/>
+                        </group>
+                        <group>
+     
+                        <group>
+                                <field name="vtex" readonly="0" force_save="1"  />
+                                <field name="is_sku_mp" attrs="{'readonly': [('ref_id_vtex_sku', '!=', False)]}"/>        
+                                <field name="product_sku_id" attrs="{'invisible' : [('is_sku_mp','=', False)],'required' : [('is_sku_mp','=', True)],'readonly': [('ref_id_vtex_sku', '!=', False)]}" />        
+                                                        
+                                <field name="brand_vtex_id" options="{'no_quick_create': True, 'no_create_edit' : True, 'no_open' : True}"/>
+                                <field name="categ_vtex_id" options="{'no_quick_create': True, 'no_create_edit' : True, 'no_open' : True}"/>
+
+                                <field name="ref_id_vtex" readonly="1" force_save="1"/>
+                                <field name="sync_vtex" readonly="1" force_save="1" invisible="1" />
+                                <field name="ref_id_vtex_sku" readonly="1" force_save="1" />
+
+                                <field name="description_e_commerce" invisible="0" />
+                                <field name="name_web_mp" invisible="0" />
+
+                                <field name="trade_policies_ids" widget="many2many_tags"/>
+                                
+                                <field name="description_short" invisible="1" />
+                                <field name="response_data" invisible="1" groups="base.group_system"/>
+                                <field name="response_data_sku"  invisible="1"  groups="base.group_system"/>
+                              
+                                
+                            </group>
+                            
+                        </group>
+                        
+                    </page>
+
+                </xpath>
+
+            </field>
+        </record>
+
+          <record id="product_template_view_tree_vtex" model="ir.ui.view">
+        <field name="name">product.template.view.tree.vtex</field>
+        <field name="model">product.template</field>
+        <field name="arch" type="xml">
+          <tree string="Productos">
+                <field name="name" />
+                <field name="default_code" />
+                <field name="categ_id" />
+                <field name="vtex" />
+                <field name="brand_vtex_id" />
+                <field name="categ_vtex_id" />
+                <field name="ref_id_vtex" />
+                <field name="ref_id_vtex_sku" />
+          </tree>
+        </field>
+      </record>
+
+        <record id="view_products_filter_mp" model="ir.ui.view">
+            <field name="name">product.template.search</field>
+            <field name="model">product.template</field>
+            <field name="arch" type="xml">
+                <search string="Products">
+                    <field name="vtex" />
+                    <filter name="filter_vtex_true" domain="[('vtex','=',True)]" string="Sincronizado con VTEX" />
+                    <filter name="filter_vtex_false" domain="[('vtex','=',False)]" string="No Sincronizado con VTEX" />
+                    <field name="name" string="Name" filter_domain="[('name', 'ilike', self)]"/>
+                    <field name="default_code"/>
+                    <separator/>
+                    <group expand="0" string="Group By">
+                        <filter name="group_vtex" string="Vtex" domain="[('vtex','=', True)]" context="{'group_by': 'vtex'}"/>
+                        <filter name="group_type_product" string="Tipo de Producto" domain="[]" context="{'group_by': 'type'}"/>
+                        <filter name="group_categ_product" string="CAtegoria de Producto" domain="[]" context="{'group_by': 'categ_id'}"/>
+                    </group>
+                </search>
+             </field>
+        </record>
+
+
+       <record id="vtex_products_action" model="ir.actions.act_window">
+          <field name="name">Products</field>
+          <field name="res_model">product.template</field>
+          <field name="view_mode">tree,form</field>
+          <field name="domain">[]</field>
+          <field name="context">{"search_default_filter_vtex_true":1}</field>
+          <field name="search_view_id" ref="view_products_filter_mp"/>
+          <field name="view_id" ref="product_template_view_tree_vtex"/>
+
+      </record>
+
+
+      <record id="product_product_view_tree_vtex" model="ir.ui.view">
+        <field name="name">product.product.view.tree.vtex</field>
+        <field name="model">product.product</field>
+        <field name="arch" type="xml">
+          <tree string="Productos">
+              <field name="default_code" />
+              <field name="name" />
+              <field name="categ_id" />
+              <field name="vtex" />
+
+          </tree>
+        </field>
+      </record>
+
+
+       <record id="vtex_product_product_action" model="ir.actions.act_window">
+          <field name="name">Products Variants</field>
+          <field name="res_model">product.product</field>
+          <field name="view_mode">tree,form</field>
+          <field name="domain">[]</field>
+          <field name="view_id" ref="product_product_view_tree_vtex"/>
+      </record>
+    </data>
+</odoo>

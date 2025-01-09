@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.cron" id="ir_cron_data_master_vtex">
+            <field name="name">Obtener Data Master</field>
+            <field name="model_id" ref="model_config_vtex_access"/>
+            <field name="state">code</field>
+            <field name="code">model._get_masters_data()</field>
+            <field name="interval_number">12</field>
+            <field name="interval_type">hours</field>
+            <field name="numbercall">-1</field>
+        </record>
+
+        <!--<record model="ir.cron" id="ir_cron_get_product_ref">
+            <field name="name">Get Id Ref Product VTEX</field>
+            <field name="model_id" ref="model_config_vtex_access"/>
+            <field name="state">code</field>
+            <field name="code">model._get_order_product_ref()</field>
+            <field name="interval_number">10</field>
+            <field name="interval_type">minutes</field>
+            <field name="numbercall">-1</field>
+        </record>-->
+        <record model="ir.cron" id="ir_cron_get_order_rofh">
+            <field name="name">Buscar Ordenes Ready of Handling</field>
+            <field name="model_id" ref="model_vtex_orders"/>
+            <field name="state">code</field>
+            <field name="code">model._get_order_ready_of_handing()</field>
+            <field name="interval_number">10</field>
+            <field name="interval_type">minutes</field>
+            <field name="numbercall">-1</field>
+        </record>
+
+        <record model="ir.cron" id="ir_cron_get_order_invoiced">
+            <field name="name">Actualizar Estados Facturados VTEX</field>
+            <field name="model_id" ref="model_vtex_orders"/>
+            <field name="state">code</field>
+            <field name="code">model._get_order_invoiced()</field>
+            <field name="interval_number">15</field>
+            <field name="interval_type">minutes</field>
+            <field name="numbercall">-1</field>
+        </record>
+        <record model="ir.cron" id="ir_cron_get_order_canceled">
+            <field name="name">Actualizar Estados Cancelados VTEX</field>
+            <field name="model_id" ref="model_vtex_orders"/>
+            <field name="state">code</field>
+            <field name="code">model._get_order_canceled()</field>
+            <field name="interval_number">20</field>
+            <field name="interval_type">minutes</field>
+            <field name="numbercall">-1</field>
+        </record>
+
+        <record model="ir.cron" id="ir_cron_get_product_specs">
+            <field name="name">Get Specs Product VTEX</field>
+            <field name="model_id" ref="model_vtex_product_category_specs"/>
+            <field name="state">code</field>
+            <field name="code">model._get_product_specs()</field>
+            <field name="interval_number">6</field>
+            <field name="interval_type">hours</field>
+            <field name="numbercall">-1</field>
+        </record>
+
+        <record model="ir.cron" id="ir_cron_set_order_invoiced">
+            <field name="name">Ordenes a estado Facturados VTEX</field>
+            <field name="model_id" ref="model_vtex_orders"/>
+            <field name="state">code</field>
+            <field name="code">model._set_order_invoiced()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">hours</field>
+            <field name="numbercall">-1</field>
+        </record>
+
+
+
+
+    </data>
+</odoo>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="get_orders_payments_vtex_form" model="ir.ui.view">
+            <field name="name">Pagos de pedidos VTEX</field>
+            <field name="model">wz.get.orders.payments.vtex</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Pagos de pedidos vtex">
+                    <group>
+                        <group>
+                            <field name="field_data" filename="name_field_data"/>
+                            <field name="field_data_shipping" filename="name_field_data_ship"/>
+                            
+                            <field name="name_field_data" invisible="1"/>
+                            <field name="name_field_data_ship" invisible="1"/>
+                            
+                            <field name="format_import" />
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="upload_data" type="object" string="Cargar" class="oe_highlight"/>
+                        <button special="cancel" class="oe_highlight" string="Cerrar"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_wz_get_orders_payments_vtex" model="ir.actions.act_window">
+            <field name="name">Pagos de pedidos vtex</field>
+            <field name="res_model">wz.get.orders.payments.vtex</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+
+        <!--Recalcular pago-->
+        <record id="wz_rec_pays_vtex_view_form" model="ir.ui.view">
+            <field name="name">wz.recalculate.orders.pays.vtex.view.form</field>
+            <field name="model">wz.recalculate.orders.pays.vtex</field>
+            <field name="arch" type="xml">
+                <form string="Recalcular Pagos">
+                    <sheet>
+                        <group>
+                            <field name="start_date" />
+                            <field name="end_date" />
+                            <field name="type_process" />
+                            
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="generate_pays_to_order_all" type="object" string="Realizar" class="oe_highlight"/>
+                        <button special="cancel" class="oe_highlight" string="Cerrar"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_wz_rec_pays_vtex" model="ir.actions.act_window">
+            <field name="name">Recalcular Pagos</field>
+            <field name="res_model">wz.recalculate.orders.pays.vtex</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+
+        <!--Aplicar pagos-->
+        <record id="apply_pays_orders_view_form" model="ir.ui.view">
+            <field name="name">Aplicar Pagos</field>
+            <field name="model">wz.op.orders.payments.vtex</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Aplicar Pagos">
+                    <group>
+                        <group>
+                                <field name="pays_ids_mp" nolabel="1" readonly="1" force_save="1">
+                                    <tree delete="false" create="false">
+                                    <field name="name" />
+                                    <field name="amount" />
+                                    <field name="date" />
+                                    <field name="partner_id" />
+                                    <field name="order_vtex_id" />
+                                    <field name="total_amount" />
+
+                                    <field name="invoice_id" />
+                                    <field name="payment_id" />
+                                    </tree>
+                                </field>
+                        </group>
+                      
+                    </group>
+                    <footer>
+                        <button name="apply_pays_to_invoice" type="object" string="Aplicar" class="oe_highlight"/>
+                        <button special="cancel" class="oe_highlight" string="Cerrar"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="action_apply_pays_orders" model="ir.actions.act_window">
+            <field name="name">Aplicar Pagos</field>
+            <field name="res_model">wz.op.orders.payments.vtex</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="model_vtex_orders_payments"/>
+            <field name="binding_view_types">list</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                    (0, 0, {'view_mode': 'form', 'view_id': ref('apply_pays_orders_view_form')})]"/>
+            <!--<field name="groups_id" eval="[(4, ref('account.group_account_invoice'))]"/>-->
+        </record>
+
+        <!--confirm pagos-->
+        <record id="confirm_pays_orders_view_form_wz" model="ir.ui.view">
+            <field name="name">Confirmar Pagos</field>
+            <field name="model">wz.op.orders.payments.vtex</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Confirmar Pagos">
+                    <group>
+                        <group>
+                                <field name="pay_ids" nolabel="1" readonly="1" force_save="1">
+                                    <tree delete="false" create="false">
+                                    <field name="name" />
+                                    <field name="state" />
+                                    <field name="date" />
+                                    <field name="partner_id" />
+                                    </tree>
+                                </field>
+                        </group>
+                      
+                    </group>
+                    <footer>
+                        <button name="confirm_payment_to_invoice" type="object" string="Aplicar" class="oe_highlight"/>
+                        <button special="cancel" class="oe_highlight" string="Cerrar"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="action_confirm_pays_orders_wz" model="ir.actions.act_window">
+            <field name="name">Confirmar Pagos</field>
+            <field name="res_model">wz.op.orders.payments.vtex</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="model_vtex_orders_payments"/>
+            <field name="binding_view_types">list</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                    (0, 0, {'view_mode': 'form', 'view_id': ref('confirm_pays_orders_view_form_wz')})]"/>
+            <!--<field name="groups_id" eval="[(4, ref('account.group_account_invoice'))]"/>-->
+        </record>
+
+        <!--Conciliar pagos-->
+        <record id="reconciliate_pays_orders_view_form_wz" model="ir.ui.view">
+            <field name="name">Conciliar Pagos</field>
+            <field name="model">wz.op.orders.payments.vtex</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Conciliar Pagos">
+                    <group>
+                        <group>
+                                <field name="pays_to_reconcilie_ids" nolabel="1" readonly="1" force_save="1">
+                                    <tree delete="false" create="false">
+                                    <field name="name" />
+                                    <field name="state" />
+                                    <field name="date" />
+                                    <field name="partner_id" />
+                                    </tree>
+                                </field>
+                        </group>
+                      
+                    </group>
+                    <footer>
+                        <button name="conciliate_payment_to_invoice" type="object" string="Aplicar" class="oe_highlight"/>
+                        <button special="cancel" class="oe_highlight" string="Cerrar"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="action_reconciliate_pays_orders_wz" model="ir.actions.act_window">
+            <field name="name">Conciliar Pagos</field>
+            <field name="res_model">wz.op.orders.payments.vtex</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="model_vtex_orders_payments"/>
+            <field name="binding_view_types">list</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                    (0, 0, {'view_mode': 'form', 'view_id': ref('reconciliate_pays_orders_view_form_wz')})]"/>
+            <!--<field name="groups_id" eval="[(4, ref('account.group_account_invoice'))]"/>-->
+        </record>
+
+        <!--Sync payments -->
+        <record id="sync_pays_orders_view_form_wz" model="ir.ui.view">
+            <field name="name">Sincronizar Pagos</field>
+            <field name="model">wz.op.orders.payments.vtex</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Conciliar Pagos">
+                    <group>
+                        <group>
+                                <field name="pays_sync_ids_mp" nolabel="1" readonly="1" force_save="1">
+                                    <tree delete="false" create="false">
+                                    <field name="name" />
+                                    <field name="state" />
+                                    <field name="date" />
+                                    <field name="partner_id" />
+                                    </tree>
+                                </field>
+                        </group>
+                      
+                    </group>
+                    <footer>
+                        <button name="sync_multiple_payments" type="object" string="Sincronizar" class="oe_highlight"/>
+                        <button special="cancel" class="oe_highlight" string="Cerrar"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="action_sync_pays_orders_orders_wz" model="ir.actions.act_window">
+            <field name="name">Sincronizar Pagos</field>
+            <field name="res_model">wz.op.orders.payments.vtex</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="model_vtex_orders_payments"/>
+            <field name="binding_view_types">list</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                    (0, 0, {'view_mode': 'form', 'view_id': ref('sync_pays_orders_view_form_wz')})]"/>
+            <!--<field name="groups_id" eval="[(4, ref('account.group_account_invoice'))]"/>-->
+        </record>
+    </data>
+</odoo>
+

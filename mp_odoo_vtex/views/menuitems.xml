@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <odoo>
+    <!-- Top menu item -->
+    <menuitem name="VTEX"
+        id="menu_odoo_vtex"
+        web_icon="mp_odoo_vtex,static/description/icon_vtex.png"
+        groups="base.group_system,mp_odoo_vtex.group_user_vtex"
+        sequence="2">
+            <menuitem id="menu_odoo_vtex_orders" name="Pedidos" sequence="1">
+              <menuitem id="sub_menu_odoo_orders" name="Pedidos de Venta" action="vtex_orders_action" groups="base.group_system,mp_odoo_vtex.group_user_vtex" sequence="0"/>
+              <menuitem id="sub_menu_get_orders" name="Obtener Pedidos VTEX" action="action_get_orders_vtex" sequence="20"  groups="base.group_system,mp_odoo_vtex.group_user_vtex"/>
+               <menuitem id="sub_menu_get_products" name="Obtener Productos VTEX" action="action_get_products_vtex" sequence="20"  groups="base.group_system,mp_odoo_vtex.group_admin_vtex_technical"/>
+            </menuitem>
+            <menuitem id="menu_odoo_vtex_products" name="Productos" sequence="1">
+              <menuitem id="sub_menu_products" name="Productos" action="vtex_products_action" groups="base.group_system,mp_odoo_vtex.group_user_vtex" sequence="0"/>
+              <menuitem id="sub_menu_product_variant" name="Productos Variantes" action="vtex_product_product_action" groups="base.group_system,mp_odoo_vtex.group_user_vtex" sequence="1"/>
+            </menuitem>
+
+            <menuitem id="menu_odoo_vtex_operaciones" name="Operaciones" sequence="1">
+                <menuitem id="sub_menu_op1" name="Operaciones" action="vtex_sync_operations_action" groups="base.group_system,mp_odoo_vtex.group_user_vtex" sequence="0"/>
+            </menuitem>
+
+            <menuitem id="menu_vtex_payments" name="Pagos" sequence="1">
+                <menuitem id="sub_menu_vtex_orders_payments" name="Pagos de ordenes" action="vtex_orders_payments_action" groups="base.group_system,mp_odoo_vtex.group_user_vtex" sequence="1"/>
+                <menuitem id="sub_menu_vtex_ord_pay_items" name="Lista de pagos de ordenes" action="vtex_ord_pay_items_action" groups="base.group_system,mp_odoo_vtex.group_user_vtex" sequence="1"/>
+                <menuitem id="sub_menu_upload_payment" name="Subir pagos" action="action_wz_get_orders_payments_vtex" groups="base.group_system,mp_odoo_vtex.group_user_vtex" sequence="3"/>
+            </menuitem>
+
+
+            <menuitem id="menu_odoo_vtex_configuration" name="Configuración" sequence="99">
+              <menuitem id="menu_odoo_vtex_setting" name="Ajustes" action="vtex_config_access_action" groups="base.group_system,mp_odoo_vtex.group_user_vtex" sequence="0"/>
+              <menuitem id="vtex_config" name="Vtex" sequence="99">
+                  <menuitem id="vtex_config_brand" name="Marca" action="vtex_brand_action" groups="base.group_system,mp_odoo_vtex.group_user_vtex" sequence="0"/>
+                  <menuitem id="vtex_config_category" name="Categorias" action="vtex_category_action" groups="base.group_system,mp_odoo_vtex.group_user_vtex" sequence="0"/>
+                  <menuitem id="vtex_categ_products_specs" name="Especificaciones de productos" action="vtex_product_categ_specs_action" groups="base.group_system,mp_odoo_vtex.group_user_vtex" sequence="0"/>
+                  <menuitem id="vtex_config_trade_policy" name="Trade Policy" action="vtex_product_trade_policies_action" groups="base.group_system,mp_odoo_vtex.group_user_vtex" sequence="0"/>
+              </menuitem>  
+              <menuitem id="menu_odoo_vtex_log" name="Log" sequence="2">
+                  <menuitem id="menu_vtex_request_operations" name="Log" action="vtex_operations_request_action" groups="base.group_system,mp_odoo_vtex.group_user_vtex" sequence="2"/>
+              </menuitem>
+              <menuitem id="menu_odoo_vtex_validator" name="Validador" sequence="2">
+                  <menuitem id="menu_vtex_validator_products" name="Configurar Productos" action="vtex_validator_products_action" groups="base.group_system,mp_odoo_vtex.group_user_vtex" sequence="1"/>
+              </menuitem>
+            </menuitem>
+    </menuitem>
+
+          
+</odoo>

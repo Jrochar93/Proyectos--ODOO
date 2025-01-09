@@ -1,0 +1,401 @@
+<odoo>
+  <data>
+
+    <record id="config_vtex_access_view_form" model="ir.ui.view">
+      <field name="name">config.vtex.access.view.form</field>
+      <field name="model">config.vtex.access</field>
+      <field name="arch" type="xml">
+        <form string="Acceso VTEX">
+          <sheet>
+                <group>
+                  <field name="name" />
+                  <field name="active" />
+                  <field name="company_id" />
+                 
+                </group>
+
+                <notebook>
+                   
+                    <page name="config_general" string="General">
+                            <group name="config_general"  string="Ubicaciones y Envios">
+                                <field name="product_shipment_id"  options="{'no_quick_create': True, 'no_create_edit' : True}" />
+                                <field name="team_id"  options="{'no_quick_create': True, 'no_create_edit' : True}" />
+                                
+                                <field name="warehouse_id"  options="{'no_quick_create': True, 'no_create_edit' : True}" />
+                                <field name="origin_id"  options="{'no_quick_create': True, 'no_create_edit' : True}" />
+                                <field name="location_multiple"   />
+                            </group>
+
+                            <group name="config_orders"  string="Pedidos">
+                                    <group>
+                                        <button name="get_status_orders_payments_invoiced" string="SYNC ORDERS" type="object" class="btn-info" />
+                                    </group>
+                                    <group>
+                                        <field name="sync_orders_auto"  />
+                                        <field name="sync_orders_handling_auto"  />
+                                        <field name="sync_order_to_invoiced"/>
+                                        <field name="days_to_review_invoiced"/>
+                                    </group>
+
+                                    
+                            </group>
+                            
+                            <group name="config_general"  string="Clientes">
+                                    <field name="colombian_edi_codes_ids" widget="many2many_tags"  />
+
+                            </group>
+
+                            <group name="location_multi" string="Multiples Ubicaciones Origen">
+                                <field name="loc_multi_ids" nolabel="1">
+                                        <tree editable="top">
+                                            <field name="name"/>
+                                            <field name="origin_id" options="{'no_quick_create': True, 'no_create_edit' : True}" />
+                                        </tree>
+
+                                </field>
+                                
+                            </group>
+
+
+                            <group name="delivery_carrier_mapp" string="Metodos de envio">
+                                <field name="delivery_carrier_ids" nolabel="1">
+                                        <tree editable="top">
+                                            <field name="name"/>
+                                            <field name="delivery_carrier_id" options="{'no_quick_create': True, 'no_create_edit' : True}" />
+                                            <field name="url_delivery"/>
+                                            <field name="add_number_guide"/>
+                                            
+                                        </tree>
+
+                                </field>
+                                
+                            </group>
+                            <group name="group_sale_channels_ids" string="Canales de Venta">
+                                <field name="sale_channels_ids" nolabel="1">
+                                        <tree editable="top">
+                                            <field name="name"/>
+                                            <field name="channel_sale_id_mp"/>
+                                        </tree>
+
+                                </field>
+                                
+                            </group>
+                    </page>
+
+                     <page name="config_general" string="Etiquetas Desc.">
+                            <group name="tags_discount" >
+                            <field name="config_tag_discounts_ids" nolabel="1">
+                                    <tree editable="top">
+                                        <field name="name"/>
+                                        <field name="type_route"/>
+                                        <field name="active"/>
+                                    </tree>
+
+                            </field>
+                            
+                        </group>
+                         <group name="items_discount" string="Etiquetas de descuentos">
+                                <field name="config_items_disc_ids" nolabel="1">
+                                        <tree editable="top">
+                                            <field name="create_date"/>
+                                            <field name="name"/>
+                                            <field name="identifier"/>
+                                            <field name="is_shipping_not_apply"/>
+                                            
+                                            <field name="active"/>
+                                        </tree>
+
+                                </field>
+                                
+                            </group>
+
+                     </page>
+
+                    <page name="config_payments" string="Pagos">
+                            <group >
+                                <button name="gen_view_regenerate_pays" string="SYNC PAYS" type="object" class="btn-info" />
+                                
+                            </group>
+                            <group name="payment_group" string="Pagos">
+                                <field name="journal_default_id" />
+                                <field name="sync_payment_auto" />
+                            </group>
+
+                            <group name="list_pay_config">
+                                <field name="config_pay_ids" widget="one2many_tags" nolabel="1" >
+                                    <tree>
+                                        <field name="account_id" />
+                                        <field name="apply_type" />
+                                        <field name="affects_pay" />
+                                    </tree>
+                                </field>
+                                
+                            </group>
+
+                     </page>
+                    <page name="catalog_api_access" string="Url de Accesos">
+                        <group string="API Catalog Access ">
+                            <field name="catalog_api_ids" nolabel="1">
+                                <tree  editable="top">
+                                    <field name="name" />
+                                    <field name="type_interface" />
+                                    <field name="url_access" />
+                                    <field name="method" />
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+
+                     <page name="acces_technical" string="Datos Técnicos">
+                        <group string="Datos Técnicos ">
+                            <field name="url_access" />
+                            <field name="user" invisible="1"/>
+                            <field name="password" invisible="1" />
+
+                            <field name="type_conexion" />
+                            <field name="account_name" />
+                            <field name="environment" />
+                            <field name="api_key" />
+                            <field name="api_token" widget="section_and_note_text" style="width: 20px;"/>
+                                        
+                        </group>
+                    </page>
+                </notebook>
+
+
+               
+          </sheet>
+            <!-- Chatter -->
+            <div class="oe_chatter">
+                <field name="message_follower_ids" groups="base.group_user"/>
+                <field name="activity_ids"/>
+                <field name="message_ids"/>
+            </div>
+        </form>
+      </field>
+    </record>
+
+    <record id="config_vtex_access_view_tree" model="ir.ui.view">
+      <field name="name">config.vtex.access.view.tree</field>
+      <field name="model">config.vtex.access</field>
+      <field name="arch" type="xml">
+        <tree string="Acceso VTEX">
+              <field name="name" />
+              <field name="active" />
+              <field name="url_access" />
+              <field name="user" invisible="1"/>
+              <field name="password"  invisible="1"/>
+              <field name="type_conexion" />
+              <field name="account_name" />
+              <field name="environment" />
+        </tree>
+      </field>
+    </record>
+
+  
+    <record id="vtex_config_access_action" model="ir.actions.act_window">
+        <field name="name">Acceso VTEX</field>
+        <field name="res_model">config.vtex.access</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <!--<field name="context">{"search_default_group_level":1}</field>
+        <field name="search_view_id" ref="view_sale_channels_filter"/>-->
+    </record>
+
+    <!--Brand-->
+
+    <record id="vtex_brand_view_form" model="ir.ui.view">
+        <field name="name">vtex.brand.view.form</field>
+        <field name="model">vtex.brand</field>
+        <field name="arch" type="xml">
+            <form string="Brand">
+                <sheet>
+                    <group>
+                        <field name="brand_id" />
+                        <field name="name" />
+                        <field name="is_active" />
+                        <field name="title" />
+                        <field name="meta_tag_description" />
+                        <field name="image_url" />
+                        <field name="commercial_user_id" options="{'no_quick_create': True, 'no_create_edit' : True}"/>
+                        
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="vtex_brand_view_tree" model="ir.ui.view">
+        <field name="name">vtex.brand.view.tree</field>
+        <field name="model">vtex.brand</field>
+        <field name="arch" type="xml">
+            <tree string="Brand" create="false" delete="false" edit="false">
+                    <field name="brand_id" />
+                    <field name="name" />
+                    <field name="is_active" />
+                    <field name="title" />
+                    <field name="commercial_user_id" optional="show"/>
+                    <field name="meta_tag_description" optional="hide" />
+                    <field name="image_url"  optional="hide"/>
+                    
+            </tree>
+        </field>
+    </record>
+
+    <record id="vtex_brand_action" model="ir.actions.act_window">
+        <field name="name">Brand</field>
+        <field name="res_model">vtex.brand</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+    </record>
+
+     <!-- Category -->
+
+    <record id="vtex_category_view_form" model="ir.ui.view">
+        <field name="name">vtex.category.view.form</field>
+        <field name="model">vtex.category</field>
+        <field name="arch" type="xml">
+            <form string="Category">
+                <sheet>
+                    <group>
+                        <field name="category_id" />
+                        <field name="name" />
+                        <field name="parent_id" />
+                        <field name="title" />
+                        <field name="description" />
+                        <field name="keywords" />
+                        <field name="is_active" />
+                        <field name="global_category_id" />
+                        <field name="father_category_id" />
+                        <field name="link_id" />
+                        <field name="parent_id" />
+                        <field name="category_specification_ids">
+                            <tree>
+                                <field name="categ_specification_id" />
+                                <field name="name" />
+                                
+                            </tree>    
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="vtex_category_view_tree" model="ir.ui.view">
+        <field name="name">vtex.category.view.tree</field>
+        <field name="model">vtex.category</field>
+        <field name="arch" type="xml">
+            <tree string="Category" create="false" delete="false" edit="false">
+                        <field name="category_id" />
+                        <field name="name" />
+                        <field name="parent_id" />
+                        <field name="title" />
+                        <field name="description" />
+                        <field name="keywords" />
+                        <field name="is_active" />
+                        <field name="global_category_id" />
+                        <field name="father_category_id" />
+                        <field name="link_id" />
+                        <field name="parent_id" />
+            </tree>
+        </field>
+    </record>
+
+        <record id="vtex_category_action" model="ir.actions.act_window">
+            <field name="name">Category</field>
+            <field name="res_model">vtex.category</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+        </record>
+
+    <!--Product specification-->
+
+        <record id="vtex_product_categ_specs_view_form" model="ir.ui.view">
+            <field name="name">vtex.product.category.specs.view.form</field>
+            <field name="model">vtex.product.category.specs</field>
+            <field name="arch" type="xml">
+                <form string="Especificaciones de producto">
+                    <sheet>
+                        <group>
+                            <field name="Name" />
+                            <field name="CategoryId" />
+                            <field name="FieldId" />
+                            <field name="IsActive" />
+                            <field name="IsStockKeepingUnit" />
+                            <field name="category_id" />
+
+                            <field name="FieldTypeId" />
+                            <field name="FieldGroupId" />
+                            <field name="Description" />
+                            <field name="Position" />
+                            <field name="IsFilter" />
+                            <field name="IsRequired" />
+                            <field name="IsOnProductDetails" />
+                            <field name="IsSideMenuLinkActive" />
+                            <field name="IsWizard" />
+                            <field name="IsSideMenuLinkActive" />
+                            <field name="DefaultValue" />
+
+                            <field name="sku_values_ids">
+                                <tree>
+                                    <field name="FieldValueId" />
+                                    <field name="Value" />
+                                    <field name="IsActive" />
+                                    <field name="Position" />
+                                    <field name="FieldId" />
+                                </tree>
+                        </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="vtex_product_categ_specs_view_tree" model="ir.ui.view">
+            <field name="name">vtex.product.category.specs.view.tree</field>
+            <field name="model">vtex.product.category.specs</field>
+            <field name="arch" type="xml">
+                <tree string="Especificaciones de producto" create="false" delete="true" edit="false">
+                            <field name="Name" />
+                            <field name="CategoryId" />
+                            <field name="FieldId" />
+                            <field name="IsActive" />
+                            <field name="IsStockKeepingUnit" />
+                            <field name="category_id" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="vtex_product_categ_specs_action" model="ir.actions.act_window">
+            <field name="name">Especificaciones de producto</field>
+            <field name="res_model">vtex.product.category.specs</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+        </record>
+
+
+        <record id="vtex_product_trade_policies_view_tree" model="ir.ui.view">
+            <field name="name">vtex.config.trade.policy.view.tree</field>
+            <field name="model">vtex.config.trade.policy</field>
+            <field name="arch" type="xml">
+                <tree string="Trade Policy">
+                            <field name="name" />
+                            <field name="id_vtex" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="vtex_product_trade_policies_action" model="ir.actions.act_window">
+            <field name="name">Trade Policy</field>
+            <field name="res_model">vtex.config.trade.policy</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+        </record>
+
+
+
+
+
+  </data>
+</odoo>

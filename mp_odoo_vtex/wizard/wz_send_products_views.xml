@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--<record id="wz_send_products_vtex" model="ir.ui.view">
+            <field name="name">Enviar Productos a Vtex</field>
+            <field name="model">wz.send.product.vtex</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Enviar Productos a Vtex">
+                    <group>
+                        <group>
+                            <field name="products_ids_mp" nolabel="1" readonly="1" force_save="1">
+                                <tree delete="false" create="false">
+                                    <field name="vtex" invisible="1" />
+                                    <field name="default_code" />
+                                    <field name="name" />
+                                    <field name="categ_id" />
+                                </tree>
+                            </field>
+                        </group>
+                      
+                    </group>
+                    <footer>
+                        <button name="request_create_product" type="object" string="Enviar" class="oe_highlight"/>
+                        <button special="cancel" class="oe_highlight" string="Cerrar"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_wz_send_products_vtex" model="ir.actions.act_window">
+            <field name="name">Crear en vtex</field>
+            <field name="res_model">wz.send.product.vtex</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="model_product_template"/>
+            <field name="binding_view_types">list</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                    (0, 0, {'view_mode': 'form', 'view_id': ref('wz_send_products_vtex')})]"/>
+        </record>-->
+
+
+        <record id="wz_send_products_sku_vtex" model="ir.ui.view">
+            <field name="name">Enviar SKU a vtex</field>
+            <field name="model">wz.send.product.vtex</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Enviar SKU a Vtex">
+                    <group>
+                        <group>
+                            <field name="products_sku_ids_mp" nolabel="1" readonly="1" force_save="1">
+                                <tree delete="false" create="false">
+                                    <field name="vtex" invisible="1" />
+                                    <field name="ref_id_vtex" />
+                                    <field name="product_sku_id" />
+                                    <field name="default_code" />
+                                    <field name="name" />
+                                    <field name="categ_id" />
+                                </tree>
+                            </field>
+                        </group>
+                      
+                    </group>
+                    <footer>
+                        <button name="request_create_product_sku" type="object" string="Enviar" class="oe_highlight"/>
+                        <button special="cancel" class="oe_highlight" string="Cerrar"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_wz_send_products_sku_vtex" model="ir.actions.act_window">
+            <field name="name">Enviar SKU a vtex</field>
+            <field name="res_model">wz.send.product.vtex</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="model_product_template"/>
+            <field name="binding_view_types">list</field>
+             <field name="view_ids" eval="[(5, 0, 0),
+                    (0, 0, {'view_mode': 'form', 'view_id': ref('wz_send_products_sku_vtex')})]"/>
+        </record>
+
+
+        <record id="wz_validate_send_products_vtex" model="ir.ui.view">
+            <field name="name">Enviar Productos a Vtex</field>
+            <field name="model">wz.send.product.vtex</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Enviar Productos a Vtex">
+                    <group>
+                        <group>
+                            <field name="products_ids_mp" nolabel="1" readonly="1" force_save="1">
+                                <tree delete="false" create="false">
+                                    <field name="vtex" invisible="1" />
+                                    <field name="default_code" />
+                                    <field name="name" />
+                                    <field name="categ_id" />
+                                </tree>
+                            </field>
+                        </group>
+                      
+                    </group>
+                    <footer>
+                        <button name="request_create_product" type="object" string="Enviar" class="oe_highlight"/>
+                        <button special="cancel" class="oe_highlight" string="Cerrar"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_wz_validate_send_p_vtex" model="ir.actions.act_window">
+            <field name="name">Enviar Productos a Vtex</field>
+            <field name="res_model">wz.send.product.vtex</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="model_product_template"/>
+            <field name="binding_view_types">list</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                    (0, 0, {'view_mode': 'form', 'view_id': ref('wz_validate_send_products_vtex')})]"/>
+        </record>
+
+
+
+    </data>
+</odoo>

@@ -1,0 +1,362 @@
+<odoo>
+  <data>
+
+    <record id="vtex_orders_view_form" model="ir.ui.view">
+        <field name="name">vtex.orders.view.form</field>
+        <field name="model">vtex.orders</field>
+        <field name="arch" type="xml">
+            <form string="Ordenes de Venta" create="false" delete="true" edit="true">
+                      <header>
+                  <button string="SINCRONIZAR" name="sync_order" type="object" class="oe_highlight" states="draft,error"/>
+                  <!--<button name="action_confirm" string="确认" type="object" states="draft" />
+                  <button name="action_close" string="CERRAR" type="object" states="confirmed" />-->
+                  <button name="action_draft" string="Borrador" type="object" states="validate"  groups="base.group_system"/>
+                  <button name="action_cancel" string="CANCELAR" type="object" states="draft,error" />
+                  <button name="action_break_synch" string="DES-SINCRONIZAR" type="object" states="validate" />
+                  <button name="sync_json_draft" string="Sincronizar Json" type="object" class="btn-danger" groups="mp_odoo_vtex.group_admin_vtex_technical"/>
+                  <button name="sync_start_handling" string="Preparando Entrega" type="object" class="btn-info" attrs="{'invisible': [('status', '=', 'handling')]}"/>
+                  <button name="sync_order_invoiced" string="Facturado" type="object" class="btn-success" attrs="{'invisible': [('status', 'in', ['ready-for-handling
+','invoiced'])]}"/>
+                  <button name="get_status_order_one" string="Datos de estados" type="object" class="btn-info" />
+                  <button name="sync_pay_vtex" string="SYNC PAY" type="object" class="btn-info" />
+
+                  <field name="state" widget="statusbar" statusbar_visible="draft,validate,error,cancel" />
+                  <field name="sync_ok" invisible="1" />
+
+                  
+                     
+          </header>
+                <sheet>
+                    <div invisible="1">
+                        <field name="control_access" invisible="1" />
+                        <field name="control_opt_order" invisible="0" />
+
+                      <div class="alert alert-success" role="alert" attrs="{}">
+                          <span style="font-weight:bold;">Permitido</span><br/>
+                      </div>
+                      <div class="alert alert-danger" role="alert" attrs="{}">
+                          <span style="font-weight:bold;">Error </span><br/>
+                      </div>
+                    </div>
+                  <group>
+                    <group name="order_odoo" string="Pedido de Venta">
+                            <field name="sale_order_id" />
+                            <field name="state_order" />
+                            <field name="amount_total_order" />
+                            <field name="check_state_order" invisible="1" />
+                            <field name="partner_id" />
+                            <field name="partner_shipping_id" />
+                            <field name="payment_id_mp" />
+                            <field name="payment_vtex_id_mp" />
+                          <field name="stock_picking_id" />
+                          <field name="state_picking" />
+                          <field name="nro_guia" />
+                          
+                          <field name="invoice_id" />
+                     </group>
+
+                  
+                      <group>
+                          <field name="name" />
+                          <field name="order" />
+                          <field name="create_date" />
+                          <field name="create_uid" />
+                          <field name="write_date" />
+                          <field name="write_uid" />
+                      </group>
+                      <group>
+                          <button name="search_order" type="object" string="Search Order"  class="oe_highlight"  invisible="1"/>
+                      </group>
+
+                  </group>
+                  
+                  <group col="20" name="info">
+                          <group  string="Info" >
+                            <field name="orderId" />
+                            <field name="sequence" />
+
+                            <field name="marketplaceOrderId" />
+                            <field name="marketplace_name" />
+                            
+                            <field name="marketplaceServicesEndpoint" />
+                            <field name="origin" />
+                            <field name="affiliateId" />
+                            <field name="status" />
+                            <field name="creationDate" />
+                            <field name="statusDescription" />
+                            <field name="selectedSla" invisible="1"/>
+                            <field name="warehouseId" />
+                            <field name="courierId" />
+                            <field name="isCorporate" />
+                            <field name="value" />
+
+                 
+                        </group>    
+
+                        <group  string="Datos Personales">  
+                            <field name="email" />
+                            <field name="firstName" />
+                            <field name="lastName" />
+
+                            <field name="documentType" />
+                            <field name="document" />
+                            <field name="phone" />
+
+                            <field name="corporateName" />
+                            <field name="corporateDocument" />
+                            <field name="corporateDocument_f" />
+                            
+
+                        </group>    
+                    </group>
+
+                    <group name="totals" string="Totales">
+                          <field name="total_ids" nolabel="1" readonly="1" force_save="1">
+                            <tree>
+                                    <field name="type" />
+                                    <field name="name" />
+                                    <field name="value_sub_total" />
+                                    <field name="value_without_tax" />
+                                    <field name="value" />
+                            </tree>
+
+                    </field>
+                    </group>
+
+                    <notebook>
+ 
+                      <page name="items" string="Items">
+                         <group>
+                            <field name="items_ids" nolabel="1" readonly="1" force_save="1">
+                                <tree>
+                                  <field name="refid" />
+                                  <field name="productid" optional="hide"/>
+                                  <field name="name" />
+                                  <field name="quantity" />
+                                  <field name="ean" />
+                                  <field name="price" sum="Total"/>
+                                  <field name="price_unit" optional="hide"/>
+                                  <field name="price_sub_total" sum="Total"/>
+                                  
+                                  <field name="price_unit_without_tax" optional="show"/>
+                                  <field name="price_without_tax" />
+                                  <field name="price_discount" />
+                                  <field name="price_d_without_tax" optional="hide"/>
+                                  
+                                  <field name="price_total" sum="Total"/>
+                                  <field name="price_t_without_tax" sum="Total"/>
+
+                                  
+                                  <field name="brandId" optional="hide"/>
+                                  <field name="brandName" optional="hide"/>
+
+                                  <field name="imageurl" optional="hide"/>
+                                  <field name="order_id" optional="hide"/>
+                                </tree>
+                            </field>
+
+                        </group>
+                       </page>
+
+                        <page name="contact" string="Contacts">
+                           <group>
+                            <field name="contact_ids" nolabel="1" readonly="1" force_save="1">
+                                <tree>
+                                  <field name="type_contact" />
+                                  <field name="receiverName" />
+                                  <field name="addressType" />
+                                  <field name="addressId" optional="hide" />
+                                  <field name="versionId" optional="hide" />
+                                  <field name="entityId"  optional="hide"/>
+                                  <field name="postalCode" />
+                                  <field name="city" />
+                                  <field name="state" />
+                                  <field name="country" />
+                                  <field name="street" />
+                                  <field name="number" />
+                                  <field name="neighborhood" />
+
+                                  <field name="shippingEstimateDate" />
+                                  <field name="shippingEstimate" />
+                                  <field name="deliveryCompany" />
+
+                                  <field name="courierName" />
+                                  <field name="warehouseId" />
+                                  
+                                  <field name="courierId" />
+                                  <field name="dockId" />
+                                  <field name="accountCarrierName" />
+
+                                  <field name="complement"  optional="hide"/>
+                                  <field name="reference"  optional="hide"/>
+                                   
+                                  <field name="order_id"  optional="hide"/>
+
+                                </tree>
+                            </field>
+
+                        </group>
+                      </page>
+
+                        <page name="payment" string="Payment">
+                         <group>
+                            <field name="payment_ids" nolabel="1" readonly="1" force_save="1">
+                                <tree>
+                                  <field name="name_payment" />
+                                  <field name="order_id" />
+
+                                  <field name="id_payment_data" />
+                                  <field name="paymentSystem" />
+                                  <field name="paymentSystemName" />
+
+                                  <field name="valuepaymentS" />
+                                  <field name="referenceValue" />
+
+
+                                </tree>
+                            </field>
+
+                        </group>
+                       </page>
+
+
+                      <page name="custom_data" string="Custom Data">
+                         <group>
+                                  <field name="orderIdMarketplace_cd" />
+                                  <field name="paymentIdMarketplace_cd" />
+                                  <field name="collector_id_cd" />
+
+                                  <field name="total_paid_amount_cd" />
+                                  <field name="currency_id_cd" />
+                                  <field name="shipment_id_cd" />
+
+                        </group>
+                       </page>
+
+                        <page name="log_json" string="Log">
+                            <group>
+                                <field name="customer" invisible="1"/>
+                                <field name="items" invisible="1"/>
+                                <field name="result" invisible="0" />
+                            </group>
+                       </page>
+
+
+
+
+                    </notebook>
+
+                   
+
+                </sheet>
+                 <!-- Chatter -->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+ <record id="vtex_orders_view_pivot" model="ir.ui.view">
+      <field name="name">vtex.orders.view.pivot</field>
+      <field name="model">vtex.orders</field>
+      <field name="arch" type="xml">
+        <pivot string="Ordenes" disable_linking="true">
+                    <field name="order" type="row"/>
+                    <field name="create_date" type="col"/>
+          
+        </pivot>
+      </field>
+    </record>
+
+    <record id="vtex_orders_view_search" model="ir.ui.view">
+        <field name="name">vtex.orders.view.search</field>
+        <field name="model">vtex.orders</field>
+        <field name="arch" type="xml">
+            <search string="Ordenes">
+                
+                <field name="name" string="Orden" filter_domain="[
+                        '|', '|', '|','|','|',
+                        ('name', 'ilike', self), ('order', 'ilike', self), ('marketplace_name', 'ilike', self), ('firstName', 'ilike', self), ('sale_order_id', 'ilike', self), ('paymentIdMarketplace_cd', 'ilike', self)]"/>
+                <field name="order" />
+                <field name="sale_order_id" />
+                <field name="marketplace_name" />
+                <field name="firstName" />
+                <field name="paymentIdMarketplace_cd" />
+                
+
+                <filter name="filter_isindividual" string="Individual" domain="[('isCorporate', '=', False)]" />
+                <filter name="filter_isCorporate" string="Empresa" domain="[('isCorporate', '=', True)]" />
+                <filter name="filter_ready_for_handling" string="Ready for handling" domain="[('status', '=', 'ready-for-handling')]" />
+                <filter name="filter_handling" string="Handling" domain="[('status', '=', 'handling')]" />
+                <filter name="filter_invoiced" string="Invoiced" domain="[('status', '=', 'invoiced')]" />
+                <filter name="filter_canceled" string="Canceled" domain="[('status', '=', 'canceled')]" />
+
+                <separator/>
+                <group expand="0" string="Group By">
+                  <filter string="Estado VTEX" name="group_by_status" context="{'group_by': 'status'}"/>
+                  <filter string="Marketplace" name="group_by_marketplace_name" context="{'group_by': 'marketplace_name'}"/>
+                  <filter string="Empresa" name="group_by_is_corporate" context="{'group_by': 'isCorporate'}"/>
+                  <filter string="Fecha de creación" name="group_by_create_date" context="{'group_by': 'create_date'}"/>
+
+                </group>
+                
+                
+                
+            </search>
+        </field>
+    </record>
+
+      <record id="vtex_orders_action_tree" model="ir.ui.view">
+        <field name="name">vtex.orders.view.tree</field>
+        <field name="model">vtex.orders</field>
+        <field name="arch" type="xml">
+          <tree string="Ordenes" create="false" delete="true" edit="false">
+                        <field name="order" />
+                        <field name="name" invisible="1" />
+                        <field name="value"  />
+                        <field name="marketplace_name" />
+                        <field name="city_vtex" />
+                        <field name="state" decoration-success="state == 'validate'" decoration-info="state == 'draft'" decoration-muted="state == 'cancel'" widget="badge"/>
+                        <field name="color" invisible="1"/>
+                        <field name="creationDate" />
+                        <field name="status" decoration-success="status == 'invoiced'"  decoration-info="status == 'handling'"  decoration-warning="status == 'ready-for-handling'" decoration-muted="status == 'canceled'"  widget="badge"/>
+                        
+                        <field name="statusDescription" optional="hidden" />
+                        <field name="origin" optional="hidden"/>
+                        <field name="isCorporate" />
+
+                        <field name="sale_order_id" decoration-success="state_order == 'sale'" decoration-danger="state_order == 'draft'" widget="badge"/>
+                        <field name="state_order" decoration-success="state_order == 'sale'" decoration-danger="state_order == 'draft'" widget="badge"/>
+                        <field name="amount_total_order" />
+                        <field name="invoice_id" optional="hidden"/>
+                        <field name="partner_id" />
+                        <field name="city_shipping_id" />
+                        <field name="creationDate" optional="hidden"/>
+                        <field name="create_date" string="Creado en ERP" optional="show"/>
+                        
+                        <field name="sequence" optional="hidden" />
+                        <field name="marketplaceOrderId" optional="hidden" />
+                        <field name="marketplaceServicesEndpoint" optional="hidden" />
+                        
+                        
+          </tree>
+        </field>
+      </record>
+      <record id="vtex_orders_action" model="ir.actions.act_window">
+          <field name="name">Ordenes</field>
+          <field name="res_model">vtex.orders</field>
+          <field name="view_mode">tree,form,pivot</field>
+          <field name="domain">[]</field>
+          <!--<field name="context">{"search_default_group_level":1}</field>-->
+          <field name="search_view_id" ref="vtex_orders_view_search"/>
+      </record>
+
+
+
+    
+
+
+  </data>
+</odoo>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="get_orders_vtex_view_form" model="ir.ui.view">
+            <field name="name">Obtener Pedidos VTEX</field>
+            <field name="model">wz.get.orders.vtex</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Obtener Pedidos VTEX">
+                    <group>
+                        <group>
+                                <field name="date_start" attrs="{'invisible': [('get_one_order','=',True)],'required': [('get_one_order','=',False)]}"/>
+                                <field name="date_end" attrs="{'invisible': [('get_one_order','=',True)],'required': [('get_one_order','=',False)]}"/>
+                                <field name="get_one_order" />
+                                <field name="order_vtex" attrs="{'invisible': [('get_one_order','=',False)],'required': [('get_one_order','=',True)]}"/>
+                                <field name="state_vtex" attrs="{'invisible': [('get_one_order','=',True)],'required': [('get_one_order','=',False)]}"/>
+                        </group>
+                      
+                    </group>
+                    <footer>
+                        <button name="get_orders_vtex" type="object" string="Buscar" class="oe_highlight"/>
+                        <button special="cancel" class="oe_highlight" string="Cerrar"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_get_orders_vtex" model="ir.actions.act_window">
+            <field name="name">Obtener Pedidos VTEX</field>
+            <field name="res_model">wz.get.orders.vtex</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <!--sincronizar pedidos de venta multiples-->
+
+        <record id="sync_multiple_orders_vtex_view_form" model="ir.ui.view">
+            <field name="name">Sincronizar Pedidos</field>
+            <field name="model">wz.sync.multiple.orders.vtex</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Sincronizar Pedidos">
+                    <group>
+                        <group>
+                                <field name="order_ids_mp" nolabel="1" readonly="1" force_save="1">
+                                    <tree delete="false" create="false">
+                                        <field name="name" />
+                                        <field name="state" decoration-success="state == 'validate'" decoration-info="state == 'draft'" decoration-warning="state == 'cancel'" widget="badge"/>
+                                        <field name="color" invisible="1"/>
+                                        <field name="creationDate" />
+                                        <field name="status" decoration-success="status == 'invoiced'"  decoration-info="status == 'handling'"  decoration-warning="status == 'ready-for-handling'" widget="badge"/>
+                                        <field name="order" />
+                                        <field name="statusDescription" />
+                                        <field name="origin" />
+                                    </tree>
+                                </field>
+                        </group>
+                      
+                    </group>
+                    <footer>
+                        <button name="sync_multiple_orders" type="object" string="Sincronizar" class="oe_highlight"/>
+                        <button special="cancel" class="oe_highlight" string="Cerrar"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_sync_multiple_orders_vtex" model="ir.actions.act_window">
+            <field name="name">Sincronizar Pedidos</field>
+            <field name="res_model">wz.sync.multiple.orders.vtex</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="model_vtex_orders"/>
+            <field name="binding_view_types">list</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                    (0, 0, {'view_mode': 'form', 'view_id': ref('sync_multiple_orders_vtex_view_form')})]"/>
+            <!--<field name="groups_id" eval="[(4, ref('account.group_account_invoice'))]"/>-->
+        </record>
+
+        <!--Confirmar pedidos-->
+        <record id="sync_confirm_sale_orders_view_form" model="ir.ui.view">
+            <field name="name">Confirmar Pedidos</field>
+            <field name="model">wz.confirm.orders.sale.vtex</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Conformar Pedidos">
+                    <group>
+                        <group>
+                                <field name="order_ids_mp" nolabel="1" readonly="1" force_save="1">
+                                    <tree delete="false" create="false">
+                                        <field name="name" />
+                                        <field name="state" decoration-success="state == 'validate'" decoration-info="state == 'draft'" decoration-warning="state == 'cancel'" widget="badge"/>
+                                        <field name="color" invisible="1"/>
+                                        <field name="order" />
+                                        <field name="state_order" />
+                                    </tree>
+                                </field>
+                        </group>
+                      
+                    </group>
+                    <footer>
+                        <button name="confirm_vtex_to_order" type="object" string="Confirmar" class="oe_highlight"/>
+                        <button special="cancel" class="oe_highlight" string="Cerrar"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+
+
+        <record id="action_confirm_sale_orders_vtex" model="ir.actions.act_window">
+            <field name="name">Confirmar Pedidos de Venta</field>
+            <field name="res_model">wz.confirm.orders.sale.vtex</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="model_vtex_orders"/>
+            <field name="binding_view_types">list</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                    (0, 0, {'view_mode': 'form', 'view_id': ref('sync_confirm_sale_orders_view_form')})]"/>
+            <!--<field name="groups_id" eval="[(4, ref('account.group_account_invoice'))]"/>-->
+        </record>
+
+
+        <!--Marcar Preparando Entrega -->
+
+        <!--sincronizar pedidos de venta multiples a handling-->
+
+        <record id="sync_handling_orders_vtex_view_form" model="ir.ui.view">
+            <field name="name">Sincronizar Pedidos</field>
+            <field name="model">wz.sync.multiple.orders.vtex</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Sincronizar Pedidos">
+                    <group>
+                        <group>
+                                <field name="order_to_handling_ids_mp" nolabel="1" readonly="1" force_save="1">
+                                    <tree delete="false" create="false">
+                                        <field name="name" />
+                                        <field name="status" decoration-success="status == 'invoiced'"  decoration-info="status == 'handling'"  decoration-warning="status == 'ready-for-handling'" widget="badge"/>
+                                        <field name="order" />
+                                        <field name="statusDescription" />
+                                        <field name="origin" />
+                                    </tree>
+                                </field>
+                        </group>
+                      
+                    </group>
+                    <footer>
+                        <button name="sync_handling_orders" type="object" string="Enviar" class="oe_highlight"/>
+                        <button special="cancel" class="oe_highlight" string="Cerrar"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_sync_handling_orders_vtex" model="ir.actions.act_window">
+            <field name="name">Preparando Entrega</field>
+            <field name="res_model">wz.sync.multiple.orders.vtex</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="model_vtex_orders"/>
+            <field name="binding_view_types">list</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                    (0, 0, {'view_mode': 'form', 'view_id': ref('sync_handling_orders_vtex_view_form')})]"/>
+        </record>
+
+
+        <!--MArcar facturados -->
+
+        <!--sincronizar pedidos de venta multiples-->
+
+        <record id="sync_invoice_orders_vtex_view_form" model="ir.ui.view">
+            <field name="name">Sincronizar Pedidos</field>
+            <field name="model">wz.sync.multiple.orders.vtex</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Sincronizar Pedidos">
+                    <group>
+                        <group>
+                                <field name="order_to_invoice_ids_mp" nolabel="1" readonly="1" force_save="1">
+                                    <tree delete="false" create="false">
+                                        <field name="order" />
+                                        <field name="value" />
+                                        <field name="status" decoration-success="status == 'invoiced'"  decoration-info="status == 'handling'"  decoration-warning="status == 'ready-for-handling'" widget="badge"/>
+                                        <field name="sale_order_id" />
+                                        <field name="state_order" invisible="1" />
+                                        <field name="amount_total_order" />
+                                        <field name="invoice_id" />
+                                        <field name="origin" />
+                                    </tree>
+                                </field>
+                        </group>
+                      
+                    </group>
+                    <footer>
+                        <button name="sync_invoice_orders" type="object" string="Enviar" class="oe_highlight"/>
+                        <button special="cancel" class="oe_highlight" string="Cerrar"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_syncinvoice_orders_vtex" model="ir.actions.act_window">
+            <field name="name">Facturados</field>
+            <field name="res_model">wz.sync.multiple.orders.vtex</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="model_vtex_orders"/>
+            <field name="binding_view_types">list</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                    (0, 0, {'view_mode': 'form', 'view_id': ref('sync_invoice_orders_vtex_view_form')})]"/>
+            <!--<field name="groups_id" eval="[(4, ref('account.group_account_invoice'))]"/>-->
+        </record>
+
+
+
+        <!--Buscar productos-->
+
+            <record id="get_products_vtex" model="ir.ui.view">
+            <field name="name">Sincronizar Productos VTEX</field>
+            <field name="model">wz.get.products.vtex</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Sincronizar Productos VTEX">
+                    <group>
+                        <group>
+                            <field name="from_id" />
+                            <field name="to_id" />
+                            <field name="validate_exist" />
+                        </group>
+                      
+                    </group>
+                    <footer>
+                        <button name="get_ref_id_vtex" type="object" string="Buscar" class="oe_highlight"/>
+                        <button special="cancel" class="oe_highlight" string="Cerrar"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_get_products_vtex" model="ir.actions.act_window">
+            <field name="name">Sincronizar Productos VTEX</field>
+            <field name="res_model">wz.get.products.vtex</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+
+        
+        <!-- Validar Facturas de ordenes-->
+        <record id="wz_orders_payments_invoiced_view_form" model="ir.ui.view">
+            <field name="name">wz.validate.orders.payments.invoiced.vtex.view.form</field>
+            <field name="model">wz.validate.orders.payments.invoiced.vtex</field>
+            <field name="arch" type="xml">
+                <form string="Validar Facturas/Pagos en pedidos">
+                    <sheet>
+                        <group>
+                            <field name="start_date" />
+                            <field name="end_date" />
+                            <field name="type_process" />
+                            
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="get_data_to_orders_vtex" type="object" string="Realizar" class="oe_highlight"/>
+                        <button special="cancel" class="oe_highlight" string="Cerrar"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_wz_orders_payments_invoiced_vtex" model="ir.actions.act_window">
+            <field name="name">Validar Facturas/Pagos en pedidos</field>
+            <field name="res_model">wz.validate.orders.payments.invoiced.vtex</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+
+   
+
+    </data>
+</odoo>

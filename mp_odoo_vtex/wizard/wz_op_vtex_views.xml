@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--Sincronizar multiplaes solicitudes-->
+
+        <record id="wz_sync_op_request_view_form" model="ir.ui.view">
+            <field name="name">Solicitudes </field>
+            <field name="model">wz.op.request.vtex</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Peticiones">
+                    <group>
+                        <group>
+		                <field name="request_ops_mp" nolabel="1" readonly="1" force_save="1">
+		                    <tree delete="false" create="false">
+		                        <field name="name" />
+		                        <field name="state" />
+		                        <field name="type_interface" />
+		                	<field name="type_request" />
+		                    </tree>
+		                </field>
+                        </group>
+                      
+                    </group>
+                    <footer>
+                        <button name="sync_multiple_request" type="object" string="Enviar" class="oe_highlight"/>
+                        <button special="cancel" class="oe_highlight" string="Cerrar"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_wz_sync_op_vtex" model="ir.actions.act_window">
+            <field name="name">Peticiones </field>
+            <field name="res_model">wz.op.request.vtex</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="model_vtex_sync_operations"/>
+            <field name="binding_view_types">list</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                    (0, 0, {'view_mode': 'form', 'view_id': ref('wz_sync_op_request_view_form')})]"/>
+            <!--<field name="groups_id" eval="[(4, ref('account.group_account_invoice'))]"/>-->
+        </record>
+
+    </data>
+</odoo>
