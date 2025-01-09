@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Herencia del modelo ResConfigSettings de bcn_fel -->
+        <record id="res_config_settings_inherit" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="bcn_fel.res_config_settings_view_form" />
+            <field name="arch" type="xml">
+                <!-- Añadir el bloque Configuración Workflow dentro de BCN Configuración -->
+                <xpath expr="//div[@data-key='bcn_fel']" position="inside">
+                    <!-- Nuevo bloque de configuración: Configuración Workflow -->
+                    <div class="app_settings_block" data-string="Configuración Workflow" string="Configuración Workflow">
+                        <h2>Configuración Workflow</h2>
+                        <div class="row mt16 o_settings_container" name="workflow_config">
+                            <!-- Nuevo campo: Cuenta Contable -->
+                            <div class="col-12 col-lg-10 o_setting_box">
+                                <div class="o_setting_right_pane">
+                                    <div>
+                                        <label string="Diario de Inserción" for="diario_contable_id"/>
+                                        <div class="text-muted">
+                                             Seleccione un diario para insertar las facturas de proveedor
+                                        </div>
+                                        <div class="content-group mt16">
+                                            <field name="diario_contable_id" colspan="4" nolabel="1" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
