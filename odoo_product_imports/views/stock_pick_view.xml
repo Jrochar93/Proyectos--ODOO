@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="stock_pick_form_inherit_purchase_imports" model="ir.ui.view">
+          <field name="name">stock.pick.inherit</field>
+          <field name="model">stock.picking</field>
+          <field name="inherit_id" ref="stock.view_picking_form"/>
+          <field name="arch" type="xml">
+              <xpath expr="//notebook/page[@name='extra']/group/group[@name='other_infos']" position="inside">
+                    <field name="purchase_import_id"/>
+              </xpath>
+          </field>
+        </record>
+    </data>
+</odoo>

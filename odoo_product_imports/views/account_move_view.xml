@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="account_move_form_inherit_purchase_imports" model="ir.ui.view">
+          <field name="name">account.move.inherit</field>
+          <field name="model">account.move</field>
+          <field name="inherit_id" ref="account.view_move_form"/>
+          <field name="arch" type="xml">
+              <xpath expr="//notebook/page[@name='other_info']/group/group[@name='accounting_info_group']" position="inside">
+                    <field name="purchase_import_id"/>
+              </xpath>
+          </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="view_stock_landed_cost_form_inherit_purchase_imports" model="ir.ui.view">
+          <field name="name">stock.landed.cost.form.inherit</field>
+          <field name="model">stock.landed.cost</field>
+          <field name="inherit_id" ref="stock_landed_costs.view_stock_landed_cost_form"/>
+          <field name="arch" type="xml">
+              <xpath expr="//field[@name='vendor_bill_id']" position="after">
+                    <field name="purchase_import_id"/>
+              </xpath>
+          </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,190 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="odoo_product_imports_form_view">
+      <field name="name">odoo_product_imports.form</field>
+      <field name="model">purchase.imports</field>
+      <field name="arch" type="xml">
+        <form string="Product Imports Form">
+            <header>
+                <button name="set_to_confirm" string="Confirm" type="object" states='draft' class="oe_highlight"/>
+                <button name="set_to_inprogress" string="In Progress" type="object" states="confirm" class="oe_highlight"/>
+                <button name="set_to_close" string="Close" type="object" states="inprogress,confirm" />
+                <button name="set_to_cancel" string="Cancel" type="object" states="confirm,draft"/>
+                <button name="set_to_draft" string="Draft" type="object" states="cancel" class="oe_highlight"/>
+                <button name="comfirm_stock_landed_cost" string="Confirmar Costos en Destino" type="object" states="close" class="oe_highlight"/>
+                <button name="compute_stock_landed_cost" string="Calcular Costos en Destino" type="object" states="close" class="oe_highlight"/>
+                <field name="state" widget="statusbar"/>
+            </header>
+
+          <sheet>
+                <div class="oe_button_box"  name="button_box">
+                    <button name="action_open_fob_invoices" type="object" class="oe_stat_button"  icon="fa-line-chart">
+                        <field name="fob_invoice_count" string="FOB invoices" widget="statinfo"/>
+                    </button>
+                    <button name="action_invoice_costs" type="object" class="oe_stat_button"  icon="fa-line-chart">
+                        <field name="account_move_count" string="Invoice Costs" widget="statinfo"/>
+                    </button>
+
+                    <button name="action_import_advances" type="object" class="oe_stat_button"  icon="fa-paste">
+                        <field name="import_advances_count" string="Advances" widget="statinfo"/>
+                    </button>
+                    <button name="action_operations_trans" type="object" class="oe_stat_button"  icon="fa-truck">
+                        <field name="stock_pick_count" string="Receptions" widget="statinfo"/>
+                    </button>
+                    <button name="action_purchase_quatation" type="object" class="oe_stat_button"  icon="fa-shopping-cart">
+                        <field name="purchase_order_count" string="Purchase" widget="statinfo"/>
+                    </button>
+                    <button string="Clearance" class="oe_stat_button"  icon="fa-chain-broken"/>
+                </div>
+                <div class="oe_title">
+                    <h1>
+                        <field name="name" readonly="1"/>
+                    </h1>
+                </div>
+
+              <group col="12" string="General information">
+                    <group colspan="4">
+                        <field name="trading_id"/>
+                    </group>
+                    <group colspan="4">
+                        <field name="supplier_importation_num"/>
+                    </group>
+                    <group colspan="4">
+                        <field name="closing_date"/>
+                    </group>
+                </group>
+
+                <group col="12">
+                    <group colspan="4" string="Dates Port Int.">
+                        <field name="date_origin"/>
+                        <field name="date_realy"/>
+                    </group>
+                    <group colspan="4" string="Dates Port Nac.">
+                        <field name="date_out_origin"/>
+                        <field name="date_out_realy"/>
+                    </group>
+                    <group colspan="4" string="Warehouse Dates">
+                        <field name="dates"/>
+                        <field name="dates_realy"/>
+                    </group>
+                </group>
+
+
+              <group string="Purchase information">
+                <group >
+                  <!--<field name="calculate_method"/>-->
+                  <field name="incoterm_id"/>
+                </group>
+                <group >
+                  <field name="origin"/>
+                  <field name="destination"/>
+                  <field name="caricom"/>
+                  <!--<field name="value_flete"/>
+                  <field name="flete_currency"/>-->
+                </group>
+              </group>
+
+              <!--<group>
+                  <group string="Sure">
+                    <field name="type_seguro"/>
+                  </group>
+              </group>-->
+
+              <group string="Totals">
+                <group >
+                  <field name="currency_id"/>
+                  <field name="date_cost"/>
+                  <field name="currency_rate"/>
+                </group>
+                <!--<group >
+                  <field name="amount_total_weight"/>
+                  <field name="amount_total_products"/>
+                  <field name="amount_total_products_adua"/>
+                  <field name="amount_total_transport"/>
+                  <field name="amount_total_expenses"/>
+                  <field name="amount_total_aranceles"/>
+                  <field name="amount_total_importation"/>
+                </group>-->
+              </group>
+                <notebook>
+                    <page string="Purchase Orders">
+                        <field name="purchase_order_ids">
+                            <tree>
+                                <field name="state" invisible="1"/>
+                                <field name="name"/>
+                                <field name="partner_id"/>
+                                <field name="date_order"/>
+                                <field name="currency_id"/>
+                                <field name="amount_untaxed" sum="amount_untax"/>
+                                <field name="amount_total" sum="amout_total"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <!--<page name="additional_costs" string="Additional Costs">
+                        <field name="account_move_ids"/>
+                    </page>-->
+                    <page name="additional_costs" string="Costos Adicionales">
+                        <field name="stock_landed_cost_ids"/>
+                    </page>
+                    
+                    <!--<page name="additional_payment" string="Anticipos">
+                        <field name="account_payment_move_ids"/>
+                    </page>-->
+                    <page name="additional_payment" string="Anticipos">
+                        <field name="purchase_payment_move_ids" readonly="True"/>
+                    </page>
+                    <page name="products" string="Productos">
+                        <field name="stock_landed_cost_line2_ids">
+                            <tree context="{'group_by':'product_id'}">
+                                <!--<field name="name"/>-->
+                                <field name="product_id"/>
+                                <field name="quantity" sum="quantity_sum"/>
+                                <field name="former_cost" sum="former_cost_sum"/>
+                                <field name="final_cost" sum="final_cost_sum"/>
+                                <field name="additional_landed_cost" sum="additional_landed_cost_sum"/>
+                                <field name="standard_price" sum="standard_price_sum"/>
+                                <field name="price_unit" sum="price_unit_sum"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="About">
+                        This is an the Purchase Import example
+                    </page>
+                </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="odoo_product_imports_tree_view">
+      <field name="name">odoo_product_imports.tree</field>
+      <field name="model">purchase.imports</field>
+      <field name="arch" type="xml">
+        <tree string="Product Imports Tree">
+            <field name="name"/>
+            <field name="trading_id"/>
+            <field name="date_origin"/>
+            <field name="closing_date"/>
+            <field name="state"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="action_purchase_imports" model="ir.actions.act_window">
+        <field name="name">Purchase Imports</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">purchase.imports</field>
+        <field name="view_id" ref="odoo_product_imports.odoo_product_imports_tree_view"/>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create a new Imports, the first step of a new Import!
+          </p>
+        </field>
+    </record>
+
+<!--    <menuitem id="main_odoo_product_import_menu" name="Purchase" parent="purchase.menu_purchase_root" />-->
+    <menuitem id="product_import_menu" name="Purchase Imports" parent="purchase.menu_purchase_root" sequence="1" action="action_purchase_imports"/>
+  </data>
+</odoo>

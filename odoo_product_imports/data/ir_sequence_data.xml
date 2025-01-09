@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Sequences for sale.order -->
+        <record id="seq_purchase_imports" model="ir.sequence">
+            <field name="name">Purchase Imports</field>
+            <field name="code">purchase.imports</field>
+            <field name="prefix">IMP-%(year)s-</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+    </data>
+</odoo>

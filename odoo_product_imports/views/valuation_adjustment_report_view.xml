@@ -1,0 +1,42 @@
+<odoo>
+    <data>
+        
+        <record id="report_valuation_adjustment_lines_view_tree" model="ir.ui.view">
+            <field name="name">report.valuation.adjustment.lines.view.tree</field>
+             <field name="type">tree</field>
+            <field name="model">report.valuation.adjustment.lines</field>
+            <field name="arch" type="xml">
+                <tree string="Productos Importación" create="0" edit="0">
+                    <field name="product_id"/>
+                    <field name="quantity"/>
+                    <field name="former_cost"/>
+                    <field name="final_cost"/>
+                    <field name="additional_landed_cost"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="report_valuation_adjustment_lines_view_search" model="ir.ui.view">
+            <field name="name">report.valuation.adjustment.lines.view.search</field>
+            <field name="model">report.valuation.adjustment.lines</field>
+            <field name="arch" type="xml">
+              <search>
+                <field name="product_id"/>
+                    <field name="quantity"/>
+                    <field name="former_cost"/>
+                    <field name="final_cost"/>
+                    <field name="additional_landed_cost"/>
+              </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_report_valuation_adjustment_lines_tree">
+            <field name="name">Productos Importación</field>
+            <field name="res_model">report.valuation.adjustment.lines</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+        <menuitem id="report_valuation_adjustment_lines" name="Valuación Productos Importación" parent="purchase.menu_purchase_root" sequence="4" />
+        <menuitem id="report_valuation_adjustment_lines_action" name="Valuación Productos Importación" parent="report_valuation_adjustment_lines" action="odoo_product_imports.action_report_valuation_adjustment_lines_tree" sequence="5"/>
+    </data>
+</odoo>
