@@ -1,0 +1,26 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="accionistas_form_view">
+            <field name="name">aclm.accionistas.form.view</field>
+            <field name="model">aclm.accionistas</field>
+            <field name="arch" type="xml">
+                <form string="Accionistas" class="oe_form_compact">
+                    <sheet>
+                        <header>
+                            <div class="form-header">
+                                <h2>Listado Oficial De La Asociacion Canal de las Mercedes</h2>
+                            </div>
+                        </header>
+                        <br/>
+                        <br/>
+                        
+                        <br/>
+                        <group>
+                            <button string="Generar Excel" type="object" name="generar_accionistas_excel" class="oe_highlight"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

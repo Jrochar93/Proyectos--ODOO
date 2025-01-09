@@ -1,0 +1,42 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="cuotas_form_view">
+            <field name="name">aclm.cuotas.form.view</field>
+            <field name="model">aclm.cuotas</field>
+            <field name="arch" type="xml">
+                <form string="Cuotas" class="oe_form_compact">
+                    <sheet>
+                        <header>
+                            <div class="form-header">
+                                <h2>Formulario Cuotas</h2>
+                            </div>
+                        </header>
+                        <br/>
+                        <br/>
+                        <group>
+                            <group>
+                                <field name="accionista_de"/>
+                                <!--<field name="holding_de"/>-->
+                                <field name="monto_valor_cuota"/>
+                                <field name="anio_inicio"/>
+                                <field name="mes_inicio"/>
+                                <field name="docto_autoriza"/>
+                                <field name="numero_cuotas"/>
+                                <field name="tipo_cuota"/>
+                            </group>
+                            <group>
+                                <field name="accionista_a"/>
+                                <!--<field name="holding_a"/>-->
+                            </group>
+                        </group>
+                        <br/>
+                        <group>
+                            <button string="Generar Borrador" type="object" name="generar_borrador" context="{'accionista_de': accionista_de, 'accionista_a': accionista_a, 'monto_valor_cuota': monto_valor_cuota, 'anio_inicio': anio_inicio, 'mes_inicio': mes_inicio, 'docto_autoriza': docto_autoriza, 'numero_cuotas': numero_cuotas, 'tipo_cuota': tipo_cuota}" class="oe_highlight"/>
+                            <button string="Generar Firme" type="object" name="generar_firme" context="{'accionista_de': accionista_de, 'accionista_a': accionista_a, 'monto_valor_cuota': monto_valor_cuota, 'anio_inicio': anio_inicio, 'mes_inicio': mes_inicio, 'docto_autoriza': docto_autoriza, 'numero_cuotas': numero_cuotas, 'tipo_cuota': tipo_cuota}" class="oe_highlight"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

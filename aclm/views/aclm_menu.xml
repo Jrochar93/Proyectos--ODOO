@@ -1,0 +1,80 @@
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="aclm_cuotas_list_action">
+            <field name="name">ACLM Cuotas</field>
+            <field name="res_model">aclm.cuotas</field>
+            <field name="view_mode">form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Sistema ACLM Cuotas
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="aclm_multas_list_action">
+            <field name="name">ACLM Multas</field>
+            <field name="res_model">aclm.multas</field>
+            <field name="view_mode">form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Sistema ACLM Multas
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="aclm_reportes_list_action">
+            <field name="name">ACLM Reportes</field>
+            <field name="res_model">aclm.reportes</field>
+            <field name="view_mode">form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Sistema ACLM Reportes
+                </p>
+            </field>
+        </record>
+
+
+
+        <record model="ir.actions.act_window" id="aclm_accionistas_list_action">
+            <field name="name">ACLM Accionistas</field>
+            <field name="res_model">aclm.accionistas</field>
+            <field name="view_mode">form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Sistema ACLM Accionistas
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="aclm_cuponera_list_action">
+            <field name="name">ACLM Cuponera</field>
+            <field name="res_model">aclm.cuponera</field>
+            <field name="view_mode">form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Sistema ACLM Accionistas
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="aclm_icontador_list_action">
+            <field name="name">ACLM Icontador</field>
+            <field name="res_model">aclm.icontador</field>
+            <field name="view_mode">form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Sistema Reportes Icontador
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Sistema ACLM" id="menu_aclm" sequence="1"/>
+        <menuitem id="menu_aclm_cuotas" name="Cuotas" parent="menu_aclm" action="aclm_cuotas_list_action" sequence="2"/>
+        <menuitem id="menu_aclm_multas" name="Multas" parent="menu_aclm" action="aclm_multas_list_action" sequence="3"/>
+        <menuitem id="menu_aclm_reportes" name="Cta.Cte. Accionistas" parent="menu_aclm" sequence="4" action="aclm_reportes_list_action"/>
+        <menuitem id="menu_aclm_accionistas" name="Listado Accionista" parent="menu_aclm" sequence="5" action="aclm_accionistas_list_action"/>
+        <menuitem id="menu_aclm_cuponera" name="Cuponera" parent="menu_aclm" sequence="6" action="aclm_cuponera_list_action"/>
+        <menuitem id="menu_aclm_icontador" name="Icontador" parent="menu_aclm" action="aclm_icontador_list_action" sequence="7"/>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,30 @@
+<odoo>
+    <record id="view_account_move_tree_inherit" model="ir.ui.view">
+        <field name="name">account.move.tree.inherit</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_out_invoice_tree"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//field[@name='invoice_date']" position="before">
+                <field name="partner_x_studio_cod_de_marco"/>
+            </xpath>
+
+            <xpath expr="//field[@name='invoice_partner_display_name']" position="replace">
+                <field name="partner_custom_name" string="Cliente"/>
+            </xpath>
+            <xpath expr="//field[@name='invoice_partner_display_name']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            
+            <xpath expr="//field[@name='partner_custom_name']" position="before">
+                <field name="custom_name" string="Descripcion"/>
+            </xpath>
+            <xpath expr="//field[@name='name']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+
+            
+        </field>
+    </record>
+</odoo>

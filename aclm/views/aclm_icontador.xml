@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="icontador_form_view">
+            <field name="name">aclm.icontador.form.view</field>
+            <field name="model">aclm.icontador</field>
+            <field name="arch" type="xml">
+                <form string="icontador" class="oe_form_compact">
+                    <sheet>
+                        <header>
+                            <div class="form-header">
+                                <h2>Reportes Icontador</h2>
+                            </div>
+                        </header>
+                        <br/>
+                        <br/>
+                        <group>
+                            <group>
+                                <field name="accionista"/>
+                                <field name="fecha_inicio_de"/>
+                                <field name="fecha_inicio_a"/>
+                                <field name="tipo_reporte" widget="selection"/>
+                            </group>
+                        </group>
+                        <group>
+                            <button string="Generar Reporte" type="object" name="Generar_Reporte"
+                                    context="{'accionista': accionista, 'fecha_inicio_de': fecha_inicio_de,
+                                              'fecha_inicio_a': fecha_inicio_a, 'tipo_reporte': tipo_reporte}"
+                                    class="oe_highlight"/>
+
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,39 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="multas_form_view">
+            <field name="name">aclm.multas.form.view</field>
+            <field name="model">aclm.multas</field>
+            <field name="arch" type="xml">
+                <form string="Multas" class="oe_form_compact">
+                    <sheet>
+                        <header>
+                            <div class="form-header">
+                                <h2>Formulario Multas</h2>
+                            </div>
+                        </header>
+                        <br/>
+                        <br/>
+                        <group>
+                            <group>
+                                <field name="accionista_de"/>
+                                <!--<field name="holding_a"/>-->
+                                <field name="pctj_multa"/>
+                                <field name="fecha_inicio"/>
+                                <field name="docto_autoriza"/>
+                            </group>
+                            <group>
+                                <field name="accionista_a"/>
+                                <!--<field name="holding_de"/>-->
+                            </group>
+                        </group>
+                        <br/>
+                        <group>
+                            <button string="Generar Borrador" type="object" name="generar_borrador" context="{'accionista_de': accionista_de, 'accionista_a': accionista_a, 'docto_autoriza': docto_autoriza, 'fecha_inicio':fecha_inicio,'pctj_multa':pctj_multa}" class="oe_highlight"/>
+                            <button string="Generar Firme" type="object" name="generar_firme" context="{'accionista_de': accionista_de, 'accionista_a': accionista_a, 'docto_autoriza': docto_autoriza, 'fecha_inicio':fecha_inicio,'pctj_multa':pctj_multa}" class="oe_highlight"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

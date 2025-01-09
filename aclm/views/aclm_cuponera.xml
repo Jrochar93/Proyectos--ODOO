@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="aclm_cuponera_form_view">
+            <field name="name">aclm.cuponera.form</field>
+            <field name="model">aclm.cuponera</field>
+            <field name="arch" type="xml">
+                <form string="Cuponera" class="oe_form_compact">
+                    <sheet>
+                        <header>
+                            <div class="form-header">
+                                <h2>Cuponera</h2>
+                            </div>
+                        </header>
+                        <br/>
+                        <br/>
+                        <group>
+                            <group>
+                                <field name="tipo_cuponera" widget="selection"/>
+                                <field name="accionista_de" attrs="{'invisible': [('tipo_cuponera', '=', 'masiva')]}"/>                                
+                            </group>
+                        </group>
+                        <group>
+                            <button string="GENERAR" type="object" name="generar_cuponera" context="{'accionista_de': accionista_de, 'tipo_cuponera': tipo_cuponera}" class="oe_highlight"/>
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+aclm_admin_cuotas,bcn admin cuotas,model_aclm_cuotas,group_aclm_admin,1,1,1,1
+aclm_admin_cuponera,bcn admin reportes,model_aclm_cuponera,group_aclm_admin,1,1,1,1
+aclm_admin_multas,bcn admin multas,model_aclm_multas,group_aclm_admin,1,1,1,1
+aclm_admin_icontador,bcn admin icontador,model_aclm_icontador,group_aclm_admin,1,1,1,1
+aclm_admin_reportes,bcn admin reportes,model_aclm_reportes,group_aclm_admin,1,1,1,1
+aclm_admin_accionistas,bcn admin accionistas,model_aclm_accionistas,group_aclm_admin,1,1,1,1
+aclm_read_all_cuotas,aclm read all cuotas,model_aclm_cuotas,,1,0,0,0
+aclm_read_all_cuponera,aclm read all reporte,model_aclm_cuponera,,1,0,0,0
+aclm_read_all_multas,aclm read all multas,model_aclm_multas,,1,0,0,0
+aclm_read_all_icontador,aclm read all icontador,model_aclm_icontador,,1,0,0,0
+aclm_read_all_reportes,aclm read all reporte,model_aclm_reportes,,1,0,0,0
+aclm_read_all_accionistas,aclm read all reporte,model_aclm_accionistas,,1,0,0,0
